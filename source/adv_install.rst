@@ -46,6 +46,7 @@ In addition, you might want to install the following optional dependencies if yo
 * python-graphviz 
 * graphviz
 * numpy 
+* beartype
 
 There are two methods how you can set-up all the dependencies before starting the build process: 
 
@@ -96,7 +97,7 @@ There are two methods how you can set-up all the dependencies before starting th
 
 .. code-block:: shell
 
-    $conda install cmake make boost libboost git compilers numpy mkl mkl-include mkl-service pybind11 libblas=*=*mkl
+    $conda install cmake make boost libboost git compilers numpy mkl mkl-include mkl-service pybind11 libblas=*=*mkl beartype
 
 
 .. Note:: 
