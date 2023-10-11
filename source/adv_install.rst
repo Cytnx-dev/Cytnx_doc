@@ -97,7 +97,7 @@ There are two methods how you can set-up all the dependencies before starting th
 
 .. code-block:: shell
 
-    $conda install cmake make boost libboost git compilers numpy mkl mkl-include mkl-service pybind11 libblas=*=*mkl beartype
+    $conda install cmake make boost libboost git compilers numpy mkl mkl-include mkl-service pybind11 libblas=*=*mkl beartype gtest
 
 
 .. Note:: 
@@ -120,7 +120,7 @@ There are two methods how you can set-up all the dependencies before starting th
 
 .. code-block:: shell
 
-    $conda conda install -c nvidia cuda
+    $conda install -c nvidia cuda
 
 
 **Option B. Install dependencies via system package manager**
