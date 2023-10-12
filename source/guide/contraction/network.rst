@@ -109,6 +109,7 @@ The legs of these tensors are arranged such that the first leg is the physical l
 
 Now suppose somehow we want to contract these two tensors by its physical legs, we create the following Network:
 
+Note that in this Network it is the second leg of the two tensors to be contracted, which will not be consistent since **A1** and **A2** are created such that their physical leg is the first one, while we can do the following:
 
 * In Python:
 
@@ -130,6 +131,7 @@ Output >>
 .. literalinclude:: ../../../code/python/outputs/guide_contraction_network_label_ord-3.out
     :language: text
 
+So when we do the PutUniTensor() we add the third argument which is a labels ordering, what this function will do is nothing but permute the tensor legs according to this label ordering before putting them into the Network.
 
 So when calling `PutUniTensor()` we add the third argument which is a labels ordering. This will permute the tensor legs according to the given label ordering before putting them into the Network.
 
