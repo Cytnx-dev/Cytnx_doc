@@ -9,7 +9,13 @@ Tensor decomposition
 
 
 
-As mention in the **Manipulate UniTensor**, the specification of **rowrank** makes it convinient to apply linear algebra operations on UniTensors. Here is an example where a **singular value decomposition (SVD)** is performed on a UniTensor:
+As mention in the **Manipulate UniTensor**, the specification of **rowrank** makes it convinient to apply linear algebra operations on UniTensors.
+
+
+Singular value decomposition
+-------------------------------
+
+Here is an example where a **singular value decomposition (SVD)** is performed on a UniTensor:
 
 * In Python:
 
@@ -63,7 +69,19 @@ We note that the singular values obtained by doing **Svd_truncate()** is truncat
     
 
 
-In the following we also provide example code for another common function **QR decomposition**:  
+Eigenvalue decomposition
+-------------------------------
+
+* In Python:
+
+.. literalinclude:: ../../code/python/doc_codes/guide_xlinalg_Eig.py
+    :language: python
+    :linenos:
+
+QR decomposition
+-------------------------------
+
+Finally provide an example code for another common function **QR decomposition**:  
 
 * In Python:
 
