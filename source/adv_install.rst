@@ -275,6 +275,21 @@ In the case that Cytnx is installed locally from binary build, not from anaconda
     CYTNX_ROOT is the path where Cytnx is installed from binary build. 
 
 
+Generate API documentation
+*************************************
+An API documentation can be generated from the source code of Cytnx by using doxygen. The documentation is accessible online at <https://kaihsinwu.gitlab.io/cytnx_api/>. To create it locally, make sure that doxygen is installed:
+
+.. code-block:: shell
+
+    $conda install doxygen
+
+Then, use doxygen in the Cytnx source code folder to generate the API documentation:
+
+.. code-block:: shell
+
+    $doxygen docs.doxygen
+
+The documentation is created in the folder **docs/**. You can open **docs/html/index.html** in your browser to access it.
 
 .. toctree::
 

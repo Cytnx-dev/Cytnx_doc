@@ -81,7 +81,14 @@ Eigenvalue decomposition
 QR decomposition
 -------------------------------
 
-Finally provide an example code for another common function **QR decomposition**:  
+The **QR decomposition** decomposes a matrix *M* to the form *M = QR*, where *Q* is an orthogonal matrix (*Q Q^T = I*), and *R* is a upper-right triangular matrix. One can perform a QR decomposition by using **Qr()**.
+
+.. py:function:: Qr(Tin, is_tau)
+     
+    :param cytnx.UniTensor Tin: input tensor
+    :param bool is_tau: If *is_tau=True*, the function returns an additional one-dimensional tensor *tau* that contains the scaling factors of the Householder reflectors that generate *Q* along with *R*. See :cite:`LAPACK` for details. Default: *is_tau=False*
+
+Here is an example of a QR decomposition:
 
 * In Python:
 
@@ -93,3 +100,6 @@ Output >>
 
 .. literalinclude:: ../../code/python/outputs/guide_xlinalg_Qr.out
     :language: text
+
+.. bibliography:: ref.xlinalg.bib
+    :cited:
