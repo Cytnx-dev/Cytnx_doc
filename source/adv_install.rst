@@ -97,12 +97,24 @@ There are two methods how you can set-up all the dependencies before starting th
 
 .. code-block:: shell
 
-    $conda install cmake make boost libboost git compilers numpy mkl mkl-include mkl-service pybind11 libblas=*=*mkl beartype gtest
+    $conda install cmake make boost libboost git compilers numpy openblas pybind11 beartype
 
 
 .. Note:: 
 
-    This installation includes the compilers/linalg libraries provided by conda-forge, so the installation of compilers on system side is not required. 
+    1. This installation includes the compilers/linalg libraries provided by conda-forge, so the installation of compilers on system side is not required.
+    2. Some packages may not be required, or additional packages need to be installed, depending on the compiling options. See below for further information. If mkl shall be used instead of openblas, use the following dpenedencies:
+    
+        .. code-block:: shell
+
+            $conda install cmake make boost libboost git compilers numpy mkl mkl-include mkl-service pybind11 libblas=*=*mkl beartype
+    
+    3. After the installation, an automated test based on gtest can be run. This option needs to be activated in the install script. In this case, gtest needs to be installed as well:
+    
+        .. code-block:: shell
+
+            $conda install gtest
+
 
 .. Hint::
 
