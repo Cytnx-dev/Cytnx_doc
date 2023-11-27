@@ -1,6 +1,6 @@
 iTEBD
 ------------
-**By : Hsu Ke, Kai-Hsin Wu**
+**By : Ke Hsu, Kai-Hsin Wu**
 
 Time evolution block decimation is one of the most simple and sucessful Tensor network method :cite:`itebd-vidal`. The core concept of this algorithm is to use the imaginary time evolution to find the best variational ansatz, usually in terms of Matrix product state (MPS). 
 

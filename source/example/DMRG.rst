@@ -107,7 +107,7 @@ Now, let's first prepare the MPO, **M**. Here, the **d** is the physical bond di
 
     L0 = cytnx.UniTensor(cytnx.zeros([4,1,1]), rowrank = 0) #Left boundary
     R0 = cytnx.UniTensor(cytnx.zeros([4,1,1]), rowrank = 0) #Right boundary
-    L0.get_block_()[0,0,0] = 1.; R0.get_block_()[3,0,0] = 1.
+    L0[0,0,0] = 1.; R0[3,0,0] = 1.
 
 .. Note:: 
 
@@ -195,14 +195,16 @@ Next, we are going to prepare our variational ansatz (MPS). Here, **chi** is the
     lbls = [] # List for storing the MPS labels
     A = [None for i in range(Nsites)]
     A[0] = cytnx.UniTensor(cytnx.random.normal([1, d, min(chi, d)], 0., 1.), rowrank = 2)
-    A[0] = A[0].relabels(["0","1","2"])
+    A[0].relabels_(["0","1","2"])
+    lbls.append(["0","1","2"]) # store the labels for later convinience.
+
     for k in range(1,Nsites):
-        dim1 = A[k-1].shape()[2]; dim2 = d;
-        dim3 = min(min(chi, A[k-1].shape()[2] * d), d ** (Nsites - k - 1));
+        dim1 = A[k-1].shape()[2]; dim2 = d
+        dim3 = min(min(chi, A[k-1].shape()[2] * d), d ** (Nsites - k - 1))
         A[k] = cytnx.UniTensor(cytnx.random.normal([dim1, dim2, dim3],0.,1.), rowrank = 2)
 
         lbl = [str(2*k),str(2*k+1),str(2*k+2)]
-        A[k] = A[k].relabels(lbl)
+        A[k].relabels_(lbl)
         lbls.append(lbl) # store the labels for later convinience.
 
 
@@ -279,17 +281,17 @@ The full implementation looks like:
         LR[p+1] = anet.Launch()
 
         # Recover the original MPS labels
-        A[p] = A[p].relabels(lbls[p]) 
-        A[p+1] = A[p+1].relabels(lbls[p+1])
+        A[p].relabels_(lbls[p]) 
+        A[p+1].relabels_(lbls[p+1])
 
     _,A[-1] = cytnx.linalg.Gesvd(A[-1],is_U=True,is_vT=False) ## last one.
-    A[-1] = A[-1].relabels(lbls[-1]) # Recover the original MPS labels
+    A[-1].relabels_(lbls[-1]) # Recover the original MPS labels
 
 
 
 .. Hint::
 
-    At the line 14, we perform SVD on the last tensor but only save the U part, this is the case since the shape of the original tensor is (A[Nsites-2].shape[2], 1, 1), 
+    In the line 20, we perform SVD on the last tensor but only save the U part, this is the case since the shape of the original tensor is (A[Nsites-2].shape[2], 1, 1), 
     what we get from SVD is 1*1 matrix (or a number) for both s and Vt, moreover, these two numbers are just identity, so U is all we need.
 
 
@@ -310,13 +312,10 @@ Now we are ready for describing the main DMRG algorithm that optimize our MPS, t
     for p in range(Nsites-2,-1,-1): 
         dim_l = A[p].shape()[0]
         dim_r = A[p+1].shape()[2]
+        new_dim = min(dim_l*d,dim_r*d,chi)
 
         psi = cytnx.Contract(A[p],A[p+1]) # contract
-
         psi, Entemp = optimize_psi(psi, (LR[p],M,M,LR[p+2]), maxit, krydim)
-        Ekeep.append(Entemp)
-        
-        new_dim = min(dim_l*d,dim_r*d,chi)
 
         psi.set_rowrank_(2) # maintain rowrank to perform the svd
         s,A[p],A[p+1] = cytnx.linalg.Svd_truncate(psi,new_dim)
@@ -336,7 +335,7 @@ Now we are ready for describing the main DMRG algorithm that optimize our MPS, t
 
     A[0].set_rowrank_(1) # maintain rowrank to perform the svd
     _,A[0] = cytnx.linalg.Gesvd(A[0],is_U=False, is_vT=True)
-    A[0].relabels_(lbls[0]); #set the label back to be consistent
+    A[0].relabels_(lbls[0]); # set the label back to be consistent
 
 There are lots of things happening here, let's break it up a bit, from right to left, the first thing we do is to contract two tensors A[p] and A[p+1]:
 
@@ -499,100 +498,68 @@ So we are done! With the other loop to control the number of times we sweep, we 
     :linenos:
 
     # DMRG sweep
-    
-    Ekeep = []
+        
+    Ekeep = [] # For storing the energy
 
-    for k in range(1, numsweeps+2):   
+    for k in range(1, numsweeps+1):   
 
         for p in range(Nsites-2,-1,-1): 
-            #print(p)
-
-            dim_l = A[p].shape()[0];
-            dim_r = A[p+1].shape()[2];
-
-
-            psi = cytnx.Contract(A[p],A[p+1]) ## contract
-
-            lbl = psi.labels() ## memorize label
-            psi_T = psi.get_block_(); psi_T.flatten_() ## flatten to 1d
-
-            psi_T, Entemp = optimize_psi(psi_T, (LR[p],M,M,LR[p+2]), maxit, krydim)
-            psi_T.reshape_(dim_l,d,d,dim_r) ## convert psi back to 4-leg form 
-            psi = cytnx.UniTensor(psi_T, rowrank = 2);    
-            psi = psi.relabels(lbl)
-            Ekeep.append(Entemp)
-            
+            dim_l = A[p].shape()[0]
+            dim_r = A[p+1].shape()[2]
             new_dim = min(dim_l*d,dim_r*d,chi)
 
-            lbl = A[p].labels() #memorize label
-            lbl_ = A[p+1].labels() #memorize label
+            psi = cytnx.Contract(A[p],A[p+1]) # contract
+            psi, Entemp = optimize_psi(psi, (LR[p],M,M,LR[p+2]), maxit)
+            Ekeep.append(Entemp)
+            
+            psi.set_rowrank_(2) # maintain rowrank to perform the svd
             s,A[p],A[p+1] = cytnx.linalg.Svd_truncate(psi,new_dim)
-            A[p+1].relabels_(lbl_); #set the label back to be consistent
+            A[p+1].relabels_(lbls[p+1]); # set the label back to be consistent
 
-            slabel = s.labels()
-            s = s/s.get_block_().Norm().item() 
-            s = s.relabels(slabel)
+            s = s/s.Norm().item() # normalize s
 
-
-            A[p] = cytnx.Contract(A[p],s) ## absorb s into next neighbor
-            A[p].relabels_(lbl); #set the label back to be consistent
-
-            # A[p].print_diagram()
-            # A[p+1].print_diagram()
+            A[p] = cytnx.Contract(A[p],s) # absorb s into next neighbor
+            A[p].relabels_(lbls[p]); # set the label back to be consistent
 
             # update LR from right to left:
             anet = cytnx.Network("R_AMAH.net")
             anet.PutUniTensors(["R","B","M","B_Conj"],[LR[p+2],A[p+1],M,A[p+1].Conj()])
-            LR[p+1] = anet.Launch(optimal=True)
+            LR[p+1] = anet.Launch()
             
-            print('Sweep[r->l]: %d/%d, Loc:%d,Energy: %f'%(k,numsweeps,p,Ekeep[-1]))
+            print('Sweep[r->l]: %d/%d, Loc: %d,Energy: %f' % (k, numsweeps, p, Ekeep[-1]))
 
-        lbl = A[0].labels() #memorize label
-        A[0].set_rowrank(1)
+        A[0].set_rowrank_(1)
         _,A[0] = cytnx.linalg.Gesvd(A[0],is_U=False, is_vT=True)
-        A[0].relabels_(lbl); #set the label back to be consistent
+        A[0].relabels_(lbls[0]); #set the label back to be consistent
 
         for p in range(Nsites-1):
             dim_l = A[p].shape()[0]
             dim_r = A[p+1].shape()[2]
-
-            psi = cytnx.Contract(A[p],A[p+1]) ## contract
-            lbl = psi.labels() ## memorize label
-            psi_T = psi.get_block_(); psi_T.flatten_() ## flatten to 1d
-            psi_T, Entemp = optimize_psi(psi_T, (LR[p],M,M,LR[p+2]), maxit, krydim)
-            psi_T.reshape_(dim_l,d,d,dim_r)## convert psi back to 4-leg form 
-            psi = cytnx.UniTensor(psi_T, rowrank = 2); 
-            psi = psi.relabels(lbl)
-            Ekeep.append(Entemp);
-            
             new_dim = min(dim_l*d,dim_r*d,chi)
 
-            lbl = A[p].labels() #memorize label
-            lbl_ = A[p+1].labels() #memorize label
+            psi = cytnx.Contract(A[p],A[p+1]) ## contract
+            psi, Entemp = optimize_psi(psi, (LR[p],M,M,LR[p+2]), maxit)
+            Ekeep.append(Entemp)
 
+            psi.set_rowrank_(2) # maintain rowrank to perform the svd
             s,A[p],A[p+1] = cytnx.linalg.Svd_truncate(psi,new_dim)
-            A[p].relabels_(lbl); #set the label back to be consistent
+            A[p].relabels_(lbls[p]); #set the label back to be consistent
 
-            # s = s/s.get_block_().Norm().item()
-            slabel = s.labels()
-            s = s/s.get_block_().Norm().item() 
-            s = s.relabels(slabel)
+            s = s/s.Norm().item() # normalize s
 
             A[p+1] = cytnx.Contract(s,A[p+1]) ## absorb s into next neighbor.
-            A[p+1].relabels_(lbl_); #set the label back to be consistent
+            A[p+1].relabels_(lbls[p+1]); #set the label back to be consistent
 
+            # update LR from left to right:
             anet = cytnx.Network("L_AMAH.net")
             anet.PutUniTensors(["L","A","A_Conj","M"],[LR[p],A[p],A[p].Conj(),M])
-            LR[p+1] = anet.Launch(optimal=True);
+            LR[p+1] = anet.Launch()
 
             print('Sweep[l->r]: %d/%d, Loc: %d,Energy: %f' % (k, numsweeps, p, Ekeep[-1]))
 
-        lbl = A[-1].labels() #memorize label
-        A[-1].set_rowrank(2)
+        A[-1].set_rowrank_(2)
         _,A[-1] = cytnx.linalg.Gesvd(A[-1],is_U=True,is_vT=False) ## last one.
-        A[-1].relabels_(lbl); #set the label back to be consistent
-
-        print('done : %d'% k)
+        A[-1].relabels_(lbls[-1]); #set the label back to be consistent
 
 Compare DMRG Results
 ************************************
