@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,15 +12,15 @@
     
     <title>4. iDMRG &#8212; Cytnx  documentation</title>
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b849a4e9" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=2a422f08" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" href="../_static/bootstrap-4.3.1-dist/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/sphinxbootstrap4.css" type="text/css" />
-    <script src="../_static/jquery.js?v=5d32c60e"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
-    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <script src="../_static/sphinxbootstrap4.js"></script>
@@ -263,7 +264,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../guide/contraction/ncon.html">8.3. ncon</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../guide/linalg.html">9. Linear algebra</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../guide/linalg.html">9. Linear algebra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../guide/linalg.html#tensor-decomposition">9.1. Tensor decomposition</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../guide/linalg.html#singular-value-decomposition">9.1.1. Singular value decomposition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../guide/linalg.html#eigenvalue-decomposition">9.1.2. Eigenvalue decomposition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../guide/linalg.html#qr-decomposition">9.1.3. QR decomposition</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../guide/itersol.html">10. Iterative solver</a><ul>
@@ -279,17 +286,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../guide/xlinalg.html">11. linalg extension</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../guide/xlinalg.html#tensor-decomposition">11.1. Tensor decomposition</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../guide/xlinalg.html#singular-value-decomposition">11.1.1. Singular value decomposition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../guide/xlinalg.html#eigenvalue-decomposition">11.1.2. Eigenvalue decomposition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../guide/xlinalg.html#qr-decomposition">11.1.3. QR decomposition</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../guide/common.html">12. Common APIs</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../guide/common.html#data-type">12.1. Data type</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../guide/common.html">11. Common APIs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../guide/common.html#data-type">11.1. Data type</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#dtype"><code class="docutils literal notranslate"><span class="pre">.dtype()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#dtype_str"><code class="docutils literal notranslate"><span class="pre">.dtype_str()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#astype"><code class="docutils literal notranslate"><span class="pre">.astype()</span></code></a></li>
@@ -297,21 +295,21 @@
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#imag"><code class="docutils literal notranslate"><span class="pre">.imag()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../guide/common.html#device">12.2. Device</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../guide/common.html#device">11.2. Device</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#id0"><code class="docutils literal notranslate"><span class="pre">.device()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#device_str"><code class="docutils literal notranslate"><span class="pre">.device_str()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#to"><code class="docutils literal notranslate"><span class="pre">.to()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#to_"><code class="docutils literal notranslate"><span class="pre">.to_()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../guide/common.html#save-load">12.3. Save &amp; Load</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../guide/common.html#save-load">11.3. Save &amp; Load</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#Save"><code class="docutils literal notranslate"><span class="pre">.Save()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#Load"><code class="docutils literal notranslate"><span class="pre">.Load()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#Tofile"><code class="docutils literal notranslate"><span class="pre">.Tofile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#Fromfile"><code class="docutils literal notranslate"><span class="pre">.Fromfile()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../guide/common.html#operations">12.4. Operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../guide/common.html#operations">11.4. Operations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#clone"><code class="docutils literal notranslate"><span class="pre">.clone()</span></code></a></li>
 </ul>
 </li>
@@ -669,7 +667,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../guide/contraction/ncon.html">8.3. ncon</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../guide/linalg.html">9. Linear algebra</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../guide/linalg.html">9. Linear algebra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../guide/linalg.html#tensor-decomposition">9.1. Tensor decomposition</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../guide/linalg.html#singular-value-decomposition">9.1.1. Singular value decomposition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../guide/linalg.html#eigenvalue-decomposition">9.1.2. Eigenvalue decomposition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../guide/linalg.html#qr-decomposition">9.1.3. QR decomposition</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../guide/itersol.html">10. Iterative solver</a><ul>
@@ -685,17 +689,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../guide/xlinalg.html">11. linalg extension</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../guide/xlinalg.html#tensor-decomposition">11.1. Tensor decomposition</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../guide/xlinalg.html#singular-value-decomposition">11.1.1. Singular value decomposition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../guide/xlinalg.html#eigenvalue-decomposition">11.1.2. Eigenvalue decomposition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../guide/xlinalg.html#qr-decomposition">11.1.3. QR decomposition</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../guide/common.html">12. Common APIs</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../guide/common.html#data-type">12.1. Data type</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../guide/common.html">11. Common APIs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../guide/common.html#data-type">11.1. Data type</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#dtype"><code class="docutils literal notranslate"><span class="pre">.dtype()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#dtype_str"><code class="docutils literal notranslate"><span class="pre">.dtype_str()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#astype"><code class="docutils literal notranslate"><span class="pre">.astype()</span></code></a></li>
@@ -703,21 +698,21 @@
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#imag"><code class="docutils literal notranslate"><span class="pre">.imag()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../guide/common.html#device">12.2. Device</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../guide/common.html#device">11.2. Device</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#id0"><code class="docutils literal notranslate"><span class="pre">.device()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#device_str"><code class="docutils literal notranslate"><span class="pre">.device_str()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#to"><code class="docutils literal notranslate"><span class="pre">.to()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#to_"><code class="docutils literal notranslate"><span class="pre">.to_()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../guide/common.html#save-load">12.3. Save &amp; Load</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../guide/common.html#save-load">11.3. Save &amp; Load</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#Save"><code class="docutils literal notranslate"><span class="pre">.Save()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#Load"><code class="docutils literal notranslate"><span class="pre">.Load()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#Tofile"><code class="docutils literal notranslate"><span class="pre">.Tofile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#Fromfile"><code class="docutils literal notranslate"><span class="pre">.Fromfile()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../guide/common.html#operations">12.4. Operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../guide/common.html#operations">11.4. Operations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../guide/common.html#clone"><code class="docutils literal notranslate"><span class="pre">.clone()</span></code></a></li>
 </ul>
 </li>
@@ -1063,7 +1058,6 @@ then we can simply follows the procedures mentioned in the iTEBD example, we hav
 </pre></div>
 </div>
 <div class="docutils container" id="id2">
-<div role="list" class="citation-list">
 <div class="citation" id="id3" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">PVM12</a><span class="fn-bracket">]</span></span>
 <p>Ho N. Phien, Guifré Vidal, and Ian P. McCulloch. Infinite boundary conditions for matrix product state calculations. <em>Phys. Rev. B</em>, 86:245107, Dec 2012. URL: <a class="reference external" href="https://link.aps.org/doi/10.1103/PhysRevB.86.245107">https://link.aps.org/doi/10.1103/PhysRevB.86.245107</a>, <a class="reference external" href="https://doi.org/10.1103/PhysRevB.86.245107">doi:10.1103/PhysRevB.86.245107</a>.</p>
@@ -1084,7 +1078,7 @@ then we can simply follows the procedures mentioned in the iTEBD example, we hav
 <footer class="footer d-flex justify-content-between flex-wrap">
     <div class="copyright">
         <div>&copy; Copyright 2019-, Kai-Hsin Wu.</div>
-      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 7.1.2 using <a href="https://github.com/myyasuda/sphinxbootstrap4theme">sphinxbootstrap4theme</a> 0.6.0.</div>
+      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 6.2.1 using <a href="https://github.com/myyasuda/sphinxbootstrap4theme">sphinxbootstrap4theme</a> 0.6.0.</div>
     </div>
     <div>
         <a href="#" class="btn btn-primary btn-sm" role="botton">Back to top</a>

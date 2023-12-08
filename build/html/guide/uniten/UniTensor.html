@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
-    <title>7.9. Manipulate UniTensor &#8212; Cytnx  documentation</title>
+    <title>UniTensor class &#8212; Cytnx  documentation</title>
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
@@ -24,9 +24,7 @@
     <script src="../../_static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <script src="../../_static/sphinxbootstrap4.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="7.10. Save/Load a UniTensor" href="io.html" />
-    <link rel="prev" title="7.8. Get/set UniTensor element" href="elements.html" /> 
+    <link rel="search" title="Search" href="../../search.html" /> 
   </head><body>
   <nav class="navbar navbar-expand-md  fixed-top navbar-dark bg-dark flex-wrap">
     <button class="navbar-toggler ml-auto py-2" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
@@ -48,7 +46,7 @@
 </ul>
 </li>
 </ul>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Install &amp; Usage of Cytnx</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../install.html#conda-install">Conda install</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../install.html#using-python-api-after-conda-install">Using Python API after Conda install</a></li>
@@ -75,7 +73,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../convention.html">Function Naming convention</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../Guide.html">User Guide</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Guide.html">User Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../behavior.html">1. Objects behavior</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../behavior.html#everything-is-reference">1.1. Everything is reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../behavior.html#clone">1.2. clone</a><ul class="simple">
@@ -181,7 +179,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="../uniten.html">7. UniTensor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../uniten.html">7. UniTensor</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="print.html">7.1. Print and display</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="print.html#print-diagram">7.1.1. print_diagram()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="print.html#print-and-print-blocks">7.1.2. print() and print_blocks()</a></li>
@@ -229,13 +227,13 @@
 <li class="toctree-l4"><a class="reference internal" href="elements.html#unitensor-with-symmetries">7.8.2. UniTensor with symmetries</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">7.9. Manipulate UniTensor</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#permute">7.9.1. Permute</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#reshape">7.9.2. Reshape</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#combine-bonds">7.9.3. Combine bonds</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arithmetic">7.9.4. Arithmetic</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#rowrank">7.9.5. Rowrank</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#transpose">7.9.6. Transpose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manipulation.html">7.9. Manipulate UniTensor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="manipulation.html#permute">7.9.1. Permute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manipulation.html#reshape">7.9.2. Reshape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manipulation.html#combine-bonds">7.9.3. Combine bonds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manipulation.html#arithmetic">7.9.4. Arithmetic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manipulation.html#rowrank">7.9.5. Rowrank</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manipulation.html#transpose">7.9.6. Transpose</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="io.html">7.10. Save/Load a UniTensor</a><ul>
@@ -417,23 +415,10 @@
     <div class="related d-flex justify-content-between bg-light flex-wrap" role="navigation" aria-label="related navigation">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="../../index.html">Cytnx  documentation</a></li>
-                <li class="breadcrumb-item"><a href="../../Guide.html"
-                       >User Guide</a></li>
-                <li class="breadcrumb-item"><a href="../uniten.html"
-                       
-                         accesskey="U"
-                         class="active"
-                       ><span class="section-number">7. </span>UniTensor</a></li>
-            <li class="breadcrumb-item active"><span class="section-number">7.9. </span>Manipulate UniTensor</li>
+            <li class="breadcrumb-item active">UniTensor class</li>
         </ol>
        <div>
           <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-               <a href="elements.html" title="Previous Chapter: 7.8. Get/set UniTensor element" class="btn btn-primary" role="botton" accesskey="P">
-                   &laquo; 7.8. Get/set ...
-               </a>
-               <a href="io.html" title="Next Chapter: 7.10. Save/Load a UniTensor" class="btn btn-primary" role="botton" accesskey="N">
-                   7.10. Save/Lo... &raquo;
-               </a>
            </div>
        </div>
     </div>
@@ -453,7 +438,7 @@
 </ul>
 </li>
 </ul>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Install &amp; Usage of Cytnx</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../install.html#conda-install">Conda install</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../install.html#using-python-api-after-conda-install">Using Python API after Conda install</a></li>
@@ -480,7 +465,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../convention.html">Function Naming convention</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../Guide.html">User Guide</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Guide.html">User Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../behavior.html">1. Objects behavior</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../behavior.html#everything-is-reference">1.1. Everything is reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../behavior.html#clone">1.2. clone</a><ul class="simple">
@@ -586,7 +571,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="../uniten.html">7. UniTensor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../uniten.html">7. UniTensor</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="print.html">7.1. Print and display</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="print.html#print-diagram">7.1.1. print_diagram()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="print.html#print-and-print-blocks">7.1.2. print() and print_blocks()</a></li>
@@ -634,13 +619,13 @@
 <li class="toctree-l4"><a class="reference internal" href="elements.html#unitensor-with-symmetries">7.8.2. UniTensor with symmetries</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">7.9. Manipulate UniTensor</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#permute">7.9.1. Permute</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#reshape">7.9.2. Reshape</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#combine-bonds">7.9.3. Combine bonds</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arithmetic">7.9.4. Arithmetic</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#rowrank">7.9.5. Rowrank</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#transpose">7.9.6. Transpose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="manipulation.html">7.9. Manipulate UniTensor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="manipulation.html#permute">7.9.1. Permute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manipulation.html#reshape">7.9.2. Reshape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manipulation.html#combine-bonds">7.9.3. Combine bonds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manipulation.html#arithmetic">7.9.4. Arithmetic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manipulation.html#rowrank">7.9.5. Rowrank</a></li>
+<li class="toctree-l4"><a class="reference internal" href="manipulation.html#transpose">7.9.6. Transpose</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="io.html">7.10. Save/Load a UniTensor</a><ul>
@@ -772,16 +757,6 @@
               </div>
             
           
-  <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="elements.html"
-                          title="previous chapter"><span class="section-number">7.8. </span>Get/set UniTensor element</a></p>
-  </div>
-  <div>
-    <h4>Next topic</h4>
-    <p class="topless"><a href="io.html"
-                          title="next chapter"><span class="section-number">7.10. </span>Save/Load a UniTensor</a></p>
-  </div>
 <div id="searchbox" style="display: none">
     <form class="form search" action="../../search.html" method="get">
       <input type="text" name="q" class="form-control" placeholder="Search..." />
@@ -792,7 +767,7 @@
 
 <script type="text/javascript">$('#searchbox').show(0);</script>
   <ul class="this-page-menu list-unstyled text-right">
-    <li><a href="../../_sources/guide/uniten/manipulation.rst.txt"
+    <li><a href="../../_sources/guide/uniten/UniTensor.rst.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
         </div>
@@ -803,506 +778,30 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <section id="manipulate-unitensor">
-<h1><span class="section-number">7.9. </span>Manipulate UniTensor<a class="headerlink" href="#manipulate-unitensor" title="Permalink to this heading">¶</a></h1>
-<p>After having introduced the initialization and structure of the three UniTensor types (un-tagged, tagged and tagged with symmetries),
-we show the basic functionalities to manipulate UniTensors.</p>
-<p>Permutation, reshaping and arithmetic operations are accessed similarly to <strong>Tensor</strong> objects as introduced before, with slight modifications for symmetric UniTensors.</p>
-<section id="permute">
-<h2><span class="section-number">7.9.1. </span>Permute<a class="headerlink" href="#permute" title="Permalink to this heading">¶</a></h2>
-<p>The bond order can be changed with <em>permute</em> for all kinds of UniTensors. The order can either be defined by the index order as for the permute method of a <em>Tensor</em>, or by specifying the label order after the permutation.</p>
-<p>For example, we permute the indices of the symmetric tensor that we introduced before:</p>
-<ul class="simple">
-<li><p>In Python:</p></li>
+  <section id="unitensor-class">
+<h1>UniTensor class<a class="headerlink" href="#unitensor-class" title="Permalink to this heading">¶</a></h1>
+<p><strong>UniTensor</strong> is an extension object base on <strong>cytnx.Tensor</strong>.
+A <strong>UniTensor</strong> consist of three important parts:</p>
+<a class="reference internal image-reference" href="../../_images/UT.png"><img alt="../../_images/UT.png" class="align-center" src="../../_images/UT.png" style="width: 600px;" /></a>
+<ol class="arabic simple">
+<li><p>Block(s), which is a <strong>cytnx.Tensor</strong> (or a list/vector thereof). Block(s) store all the elements of the tensor.</p></li>
+<li><p>Bonds, which contain the information associated to each index of the tensor.</p></li>
+<li><p>labels, which give each bond a name with which it can be accessed.</p></li>
+</ol>
+<p>In the simplest case where no symmetries of the system are considered, a <strong>UniTensor</strong> can be thought of as adding the meta data bonds and labels to a <strong>cytnx.Tensor</strong>.
+A <strong>UniTensor</strong> can be constructed with a <strong>Bond</strong> object, or directly from a <strong>cytnx.Tensor</strong> which gets converted to a <strong>UniTensor</strong>.</p>
+<p>Let’s have a look at the details of <strong>UniTensor</strong>:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="create.html">7.2. Creating a UniTensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="labels.html">7.3. Changing labels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tagged.html">7.5. Tagged UniTensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="symmetric.html">7.6. UniTensor with Symmetries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blocks.html">7.7. Accessing the block(s)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="elements.html">7.8. Get/set UniTensor element</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manipulation.html">7.9. Manipulate UniTensor</a></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">bond_d</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">Bond</span><span class="p">(</span>
-<span class="linenos"> 2</span>    <span class="n">cytnx</span><span class="o">.</span><span class="n">BD_IN</span><span class="p">,</span> 
-<span class="linenos"> 3</span>    <span class="p">[</span><span class="n">cytnx</span><span class="o">.</span><span class="n">Qs</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">,</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">Qs</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">],</span>
-<span class="linenos"> 4</span>    <span class="p">[</span><span class="n">cytnx</span><span class="o">.</span><span class="n">Symmetry</span><span class="o">.</span><span class="n">U1</span><span class="p">()])</span>
-<span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="n">bond_e</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">Bond</span><span class="p">(</span>
-<span class="linenos"> 7</span>    <span class="n">cytnx</span><span class="o">.</span><span class="n">BD_IN</span><span class="p">,</span> 
-<span class="linenos"> 8</span>    <span class="p">[</span><span class="n">cytnx</span><span class="o">.</span><span class="n">Qs</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">,</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">Qs</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">],</span>
-<span class="linenos"> 9</span>    <span class="p">[</span><span class="n">cytnx</span><span class="o">.</span><span class="n">Symmetry</span><span class="o">.</span><span class="n">U1</span><span class="p">()])</span>
-<span class="linenos">10</span>
-<span class="linenos">11</span><span class="n">bond_f</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">Bond</span><span class="p">(</span>
-<span class="linenos">12</span>    <span class="n">cytnx</span><span class="o">.</span><span class="n">BD_OUT</span><span class="p">,</span>
-<span class="linenos">13</span>    <span class="p">[</span><span class="n">cytnx</span><span class="o">.</span><span class="n">Qs</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">,</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">Qs</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">&gt;&gt;</span><span class="mi">2</span><span class="p">,</span> 
-<span class="linenos">14</span>     <span class="n">cytnx</span><span class="o">.</span><span class="n">Qs</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">],</span>
-<span class="linenos">15</span>    <span class="p">[</span><span class="n">cytnx</span><span class="o">.</span><span class="n">Symmetry</span><span class="o">.</span><span class="n">U1</span><span class="p">()])</span>
-<span class="linenos">16</span>
-<span class="linenos">17</span><span class="n">Tsymm</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">UniTensor</span><span class="p">(</span>
-<span class="linenos">18</span>    <span class="p">[</span><span class="n">bond_d</span><span class="p">,</span> <span class="n">bond_e</span><span class="p">,</span> <span class="n">bond_f</span><span class="p">],</span> 
-<span class="linenos">19</span>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;symm. tensor&quot;</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">,</span><span class="s2">&quot;e&quot;</span><span class="p">,</span><span class="s2">&quot;f&quot;</span><span class="p">])</span>
-<span class="linenos">20</span>
-<span class="linenos">21</span><span class="n">Tsymm</span><span class="o">.</span><span class="n">print_diagram</span><span class="p">()</span>
-<span class="linenos">22</span>
-<span class="linenos">23</span><span class="n">Tsymm_perm_ind</span><span class="o">=</span><span class="n">Tsymm</span><span class="o">.</span><span class="n">permute</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
-<span class="linenos">24</span><span class="n">Tsymm_perm_ind</span><span class="o">.</span><span class="n">print_diagram</span><span class="p">()</span>
-<span class="linenos">25</span>
-<span class="linenos">26</span><span class="n">Tsymm_perm_label</span><span class="o">=</span><span class="n">Tsymm</span><span class="o">.</span><span class="n">permute</span><span class="p">([</span><span class="s2">&quot;f&quot;</span><span class="p">,</span><span class="s2">&quot;d&quot;</span><span class="p">,</span><span class="s2">&quot;e&quot;</span><span class="p">])</span>
-<span class="linenos">27</span><span class="n">Tsymm_perm_label</span><span class="o">.</span><span class="n">print_diagram</span><span class="p">()</span>
-</pre></div>
 </div>
-<p>Output &gt;&gt;</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-----------------------
-tensor Name : symm. tensor
-tensor Rank : 3
-contiguous  : True
-valid blocks : 4
-is diag   : False
-on device   : cytnx device: CPU
-      row           col 
-         -----------    
-         |         |    
-   d  --&gt;| 2     4 |--&gt;  f
-         |         |    
-   e  --&gt;| 2       |        
-         |         |    
-         -----------    
-
------------------------
-tensor Name : symm. tensor
-tensor Rank : 3
-contiguous  : False
-valid blocks : 4
-is diag   : False
-on device   : cytnx device: CPU
-      row           col 
-         -----------    
-         |         |    
-   f *&lt;--| 4     2 |&lt;--* e
-         |         |    
-   d  --&gt;| 2       |        
-         |         |    
-         -----------    
-
------------------------
-tensor Name : symm. tensor
-tensor Rank : 3
-contiguous  : False
-valid blocks : 4
-is diag   : False
-on device   : cytnx device: CPU
-      row           col 
-         -----------    
-         |         |    
-   f *&lt;--| 4     2 |&lt;--* e
-         |         |    
-   d  --&gt;| 2       |        
-         |         |    
-         -----------    
-</pre></div>
-</div>
-<p>We did the same permutation in two ways in this example, once using indices, once using labels. The first index of the permuted tensor corresponds to the last index of the original tensor (original index 2, label “f”), the second new index to the first old index (old index 0, label “d”) and the last new bond has the old index 1 and label “e”.</p>
-</section>
-<section id="reshape">
-<h2><span class="section-number">7.9.2. </span>Reshape<a class="headerlink" href="#reshape" title="Permalink to this heading">¶</a></h2>
-<p>Untagged UniTensors can be reshaped just like normal Tensors.</p>
-<ul class="simple">
-<li><p>In Python:</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">T</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">UniTensor</span><span class="p">(</span><span class="n">cytnx</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="linenos">2</span><span class="n">T</span><span class="o">.</span><span class="n">reshape_</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="linenos">3</span><span class="n">T</span><span class="o">.</span><span class="n">print_diagram</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Output &gt;&gt;</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-----------------------
-tensor Name : 
-tensor Rank : 3
-block_form  : False
-is_diag     : False
-on device   : cytnx device: CPU
-         --------     
-        /        \    
-        |      2 |____ 0
-        |        |    
-        |      3 |____ 1
-        |        |    
-        |      2 |____ 2
-        \        /    
-         --------     
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>A tagged UniTensor can not be reshaped. This includes symmetric UniTensors as well.</p>
-</div>
-</section>
-<section id="combine-bonds">
-<h2><span class="section-number">7.9.3. </span>Combine bonds<a class="headerlink" href="#combine-bonds" title="Permalink to this heading">¶</a></h2>
-<p>The tagged UniTensors include symmetric UniTensors cannot be reshaped, since the bonds to be combinded or splited now includes the direction and quantum number infomation,
-the reshape process involves the fusion or split of the qunatum basis, we provide combindBonds API for the tagged UniTensor as an alternative to the usual reshape function.
-Note that currently there is no API for splitting a bond, since the way to split the quantum basis will be ambiguous.
-Let’s see the complete function usage for combining bonds:</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="UniTensor.combineBonds">
-<span class="sig-prename descclassname"><span class="pre">UniTensor.</span></span><span class="sig-name descname"><span class="pre">combineBonds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indicators</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#UniTensor.combineBonds" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>indicators</strong> (<em>list</em>) – A list of <strong>integer</strong> indicating the indices of bonds to be combined. If a list of <strong>string</strong> is passed the bonds with those string labels will be combined.</p></li>
-<li><p><strong>force</strong> (<em>bool</em>) – If set to <strong>True</strong> the bonds will be combined regardless the direction or type of the bonds, otherwise the bond types will be checked. The default is <strong>False</strong>.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<p>Consider a specific example:</p>
-<ul class="simple">
-<li><p>In Python:</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">cytnx</span> <span class="kn">import</span> <span class="n">Bond</span><span class="p">,</span> <span class="n">BD_IN</span><span class="p">,</span> <span class="n">BD_OUT</span><span class="p">,</span> <span class="n">Qs</span><span class="p">,</span> <span class="n">Symmetry</span>
-<span class="linenos"> 2</span><span class="c1"># bond1 = Bond(BD_IN,[[2,0], [4,1]],[3,5],[Symmetry.U1(), Symmetry.Zn(2)])</span>
-<span class="linenos"> 3</span><span class="c1"># bond2 = Bond(BD_IN,[Qs(2,0)&gt;&gt;3, Qs(4,1)&gt;&gt;5],[Symmetry.U1(), Symmetry.Zn(2)])</span>
-<span class="linenos"> 4</span><span class="n">bd1</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">Bond</span><span class="p">(</span><span class="n">cytnx</span><span class="o">.</span><span class="n">BD_IN</span><span class="p">,[[</span><span class="mi">1</span><span class="p">],[</span><span class="o">-</span><span class="mi">1</span><span class="p">]],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
-<span class="linenos"> 5</span><span class="n">bd2</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">Bond</span><span class="p">(</span><span class="n">cytnx</span><span class="o">.</span><span class="n">BD_IN</span><span class="p">,[[</span><span class="mi">1</span><span class="p">],[</span><span class="o">-</span><span class="mi">1</span><span class="p">]],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
-<span class="linenos"> 6</span><span class="n">bd3</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">Bond</span><span class="p">(</span><span class="n">cytnx</span><span class="o">.</span><span class="n">BD_OUT</span><span class="p">,[[</span><span class="mi">2</span><span class="p">],[</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">],[</span><span class="o">-</span><span class="mi">2</span><span class="p">]],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
-<span class="linenos"> 7</span>
-<span class="linenos"> 8</span><span class="n">ut</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">UniTensor</span><span class="p">([</span><span class="n">bd1</span><span class="p">,</span><span class="n">bd2</span><span class="p">,</span><span class="n">bd3</span><span class="p">],</span><span class="n">rowrank</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="linenos"> 9</span><span class="nb">print</span><span class="p">(</span><span class="n">ut</span><span class="p">)</span>
-<span class="linenos">10</span>
-<span class="linenos">11</span><span class="n">ut</span><span class="o">.</span><span class="n">combineBonds</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
-<span class="linenos">12</span><span class="nb">print</span><span class="p">(</span><span class="n">ut</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Output &gt;&gt;</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-------- start of print ---------
-Tensor name: 
-braket_form : True
-is_diag    : False
-[OVERALL] contiguous : True
-========================
-BLOCK [#0]
- |- []   : Qn index 
- |- Sym(): Qnum of correspond symmetry
-                 -----------
-                 |         |
-   [0] U1(1)  --&gt;| 1     1 |--&gt;  [0] U1(2)
-                 |         |
-   [0] U1(1)  --&gt;| 1       |
-                 |         |
-                 -----------
-
-Total elem: 1
-type  : Double (Float64)
-cytnx device: CPU
-Shape : (1,1,1)
-[[[0.00000e+00 ]]]
-
-========================
-BLOCK [#1]
- |- []   : Qn index 
- |- Sym(): Qnum of correspond symmetry
-                  -----------
-                  |         |
-   [0] U1(1)   --&gt;| 1     1 |--&gt;  [1] U1(0)
-                  |         |
-   [1] U1(-1)  --&gt;| 1       |
-                  |         |
-                  -----------
-
-Total elem: 1
-type  : Double (Float64)
-cytnx device: CPU
-Shape : (1,1,1)
-[[[0.00000e+00 ]]]
-
-========================
-BLOCK [#2]
- |- []   : Qn index 
- |- Sym(): Qnum of correspond symmetry
-                  -----------
-                  |         |
-   [0] U1(1)   --&gt;| 1     1 |--&gt;  [2] U1(0)
-                  |         |
-   [1] U1(-1)  --&gt;| 1       |
-                  |         |
-                  -----------
-
-Total elem: 1
-type  : Double (Float64)
-cytnx device: CPU
-Shape : (1,1,1)
-[[[0.00000e+00 ]]]
-
-========================
-BLOCK [#3]
- |- []   : Qn index 
- |- Sym(): Qnum of correspond symmetry
-                  -----------
-                  |         |
-   [1] U1(-1)  --&gt;| 1     1 |--&gt;  [1] U1(0)
-                  |         |
-   [0] U1(1)   --&gt;| 1       |
-                  |         |
-                  -----------
-
-Total elem: 1
-type  : Double (Float64)
-cytnx device: CPU
-Shape : (1,1,1)
-[[[0.00000e+00 ]]]
-
-========================
-BLOCK [#4]
- |- []   : Qn index 
- |- Sym(): Qnum of correspond symmetry
-                  -----------
-                  |         |
-   [1] U1(-1)  --&gt;| 1     1 |--&gt;  [2] U1(0)
-                  |         |
-   [0] U1(1)   --&gt;| 1       |
-                  |         |
-                  -----------
-
-Total elem: 1
-type  : Double (Float64)
-cytnx device: CPU
-Shape : (1,1,1)
-[[[0.00000e+00 ]]]
-
-========================
-BLOCK [#5]
- |- []   : Qn index 
- |- Sym(): Qnum of correspond symmetry
-                  -----------
-                  |         |
-   [1] U1(-1)  --&gt;| 1     1 |--&gt;  [3] U1(-2)
-                  |         |
-   [1] U1(-1)  --&gt;| 1       |
-                  |         |
-                  -----------
-
-Total elem: 1
-type  : Double (Float64)
-cytnx device: CPU
-Shape : (1,1,1)
-[[[0.00000e+00 ]]]
-
-
-
--------- start of print ---------
-Tensor name: 
-braket_form : False
-is_diag    : False
-[OVERALL] contiguous : True
-========================
-BLOCK [#0]
- |- []   : Qn index 
- |- Sym(): Qnum of correspond symmetry
-                 ----------
-                 |        |
-   [2] U1(2)  --&gt;| 1      |
-                 |        |
-   [2] U1(2) *&lt;--| 1      |
-                 |        |
-                 ----------
-
-Total elem: 1
-type  : Double (Float64)
-cytnx device: CPU
-Shape : (1,1)
-[[0.00000e+00 ]]
-
-========================
-BLOCK [#1]
- |- []   : Qn index 
- |- Sym(): Qnum of correspond symmetry
-                 ----------
-                 |        |
-   [1] U1(0)  --&gt;| 2      |
-                 |        |
-   [1] U1(0) *&lt;--| 2      |
-                 |        |
-                 ----------
-
-Total elem: 4
-type  : Double (Float64)
-cytnx device: CPU
-Shape : (2,2)
-[[0.00000e+00 0.00000e+00 ]
- [0.00000e+00 0.00000e+00 ]]
-
-========================
-BLOCK [#2]
- |- []   : Qn index 
- |- Sym(): Qnum of correspond symmetry
-                  ----------
-                  |        |
-   [0] U1(-2)  --&gt;| 1      |
-                  |        |
-   [0] U1(-2) *&lt;--| 1      |
-                  |        |
-                  ----------
-
-Total elem: 1
-type  : Double (Float64)
-cytnx device: CPU
-Shape : (1,1)
-[[0.00000e+00 ]]
-</pre></div>
-</div>
-</section>
-<section id="arithmetic">
-<h2><span class="section-number">7.9.4. </span>Arithmetic<a class="headerlink" href="#arithmetic" title="Permalink to this heading">¶</a></h2>
-<p>Arithmetic operations for un-tagged UniTensors can be done exactly the same as with Tensors, see <a class="reference internal" href="../basic_obj/Tensor_4_arithmetic.html#tensor-arithmetic"><span class="std std-ref">Tensor arithmetic</span></a>. The supported arithmetic operations and further linear algebra functions are listed in <a class="reference internal" href="../linalg.html#linear-algebra"><span class="std std-ref">Linear algebra</span></a>.</p>
-</section>
-<section id="rowrank">
-<h2><span class="section-number">7.9.5. </span>Rowrank<a class="headerlink" href="#rowrank" title="Permalink to this heading">¶</a></h2>
-<p>Another property that we may want to maintain in UniTensor is its rowrank. It tells us how the legs of the a UniTensor are split into two halves, one part belongs to the rowspace and the other to the column space. A UniTensor can then be seen as a linear operator between these two spaces, or as a matrix. The matrix results in having the first <em>rowrank</em> indices combined to the first (row-)index and the other indices combined to the second (column-)index.</p>
-<p>Most of the linear algebra algorithms take a matrix as an input. We thus use rowrank to specify how to cast the input UniTensor into a matrix. In Cytnx, this specification makes it easy to use linear algebra operations on UniTensors.</p>
-<p>The rowrank can be specified when initializing the UniTenosr, one can also use <strong>.set_rowrank()</strong> to modify the rowrank of a UniTensor:</p>
-<ul class="simple">
-<li><p>In Python:</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># set the rowrank to be 2.</span>
-<span class="linenos">2</span><span class="n">T</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">UniTensor</span><span class="p">(</span><span class="n">cytnx</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">]),</span> <span class="n">rowrank</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> 
-<span class="linenos">3</span><span class="n">T</span><span class="o">.</span><span class="n">print_diagram</span><span class="p">()</span>
-<span class="linenos">4</span>
-<span class="linenos">5</span><span class="n">T</span><span class="o">.</span><span class="n">set_rowrank</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># modify the rowrank.</span>
-<span class="linenos">6</span><span class="n">T</span><span class="o">.</span><span class="n">print_diagram</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Output &gt;&gt;</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-----------------------
-tensor Name : 
-tensor Rank : 5
-block_form  : False
-is_diag     : False
-on device   : cytnx device: CPU
-          ---------     
-         /         \    
-   0 ____| 5     5 |____ 2
-         |         |    
-   1 ____| 5     5 |____ 3
-         |         |    
-         |       5 |____ 4
-         \         /    
-          ---------     
------------------------
-tensor Name : 
-tensor Rank : 5
-block_form  : False
-is_diag     : False
-on device   : cytnx device: CPU
-          ---------     
-         /         \    
-   0 ____| 5     5 |____ 2
-         |         |    
-   1 ____| 5     5 |____ 3
-         |         |    
-         |       5 |____ 4
-         \         /    
-          ---------     
-</pre></div>
-</div>
-<p>We leave the examples of linalg algebra operations incoporating the rowrank concept such as <strong>singular value decomposition (SVD)</strong> to the chapter <span class="xref std std-ref">linalg extension</span>.</p>
-</section>
-<section id="transpose">
-<h2><span class="section-number">7.9.6. </span>Transpose<a class="headerlink" href="#transpose" title="Permalink to this heading">¶</a></h2>
-<p>One common operation that is sensitive to the <strong>rowrank</strong> of a UniTensor is the tranpose, one can transpose a UniTensor using <strong>.Transpose()</strong> (or the in-placed method <strong>.Transpose_()</strong>), let’s see the behavior of this operation, first consider the transpose of a <strong>non-tagged</strong> UniTensor:</p>
-<ul class="simple">
-<li><p>In Python:</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">T</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">UniTensor</span><span class="p">(</span><span class="n">cytnx</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">]),</span> <span class="n">rowrank</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">])</span>
-<span class="linenos">2</span><span class="n">T</span><span class="o">.</span><span class="n">print_diagram</span><span class="p">()</span>
-<span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rowrank of T = &quot;</span><span class="p">,</span> <span class="n">T</span><span class="o">.</span><span class="n">rowrank</span><span class="p">())</span>
-<span class="linenos">4</span><span class="n">T</span><span class="o">.</span><span class="n">Transpose</span><span class="p">()</span><span class="o">.</span><span class="n">print_diagram</span><span class="p">()</span>  <span class="c1"># print the transposed T</span>
-<span class="linenos">5</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rowrank of transposed T = &quot;</span><span class="p">,</span> <span class="n">T</span><span class="o">.</span><span class="n">Transpose</span><span class="p">()</span><span class="o">.</span><span class="n">rowrank</span><span class="p">())</span>
-</pre></div>
-</div>
-<p>Output &gt;&gt;</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-----------------------
-tensor Name : 
-tensor Rank : 3
-block_form  : False
-is_diag     : False
-on device   : cytnx device: CPU
-          ---------     
-         /         \    
-   a ____| 5     5 |____ c
-         |         |    
-   b ____| 5       |        
-         \         /    
-          ---------     
-Rowrank of T =  2
------------------------
-tensor Name : 
-tensor Rank : 3
-block_form  : False
-is_diag     : False
-on device   : cytnx device: CPU
-          ---------     
-         /         \    
-   c ____| 5     5 |____ a
-         |         |    
-         |       5 |____ b
-         \         /    
-          ---------     
-Rowrank of transposed T =  1
-</pre></div>
-</div>
-<p>We see that .Transpose() swap the legs in the row space and column space, also the <em>rowrank</em> itself is modified.</p>
-<p>Next we consider the tranposition of a tagged UniTensor:</p>
-<ul class="simple">
-<li><p>In Python:</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">bd1</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">Bond</span><span class="p">(</span><span class="n">cytnx</span><span class="o">.</span><span class="n">BD_IN</span><span class="p">,[[</span><span class="mi">1</span><span class="p">],[</span><span class="o">-</span><span class="mi">1</span><span class="p">]],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
-<span class="linenos">2</span><span class="n">bd2</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">Bond</span><span class="p">(</span><span class="n">cytnx</span><span class="o">.</span><span class="n">BD_IN</span><span class="p">,[[</span><span class="mi">1</span><span class="p">],[</span><span class="o">-</span><span class="mi">1</span><span class="p">]],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
-<span class="linenos">3</span><span class="n">bd3</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">Bond</span><span class="p">(</span><span class="n">cytnx</span><span class="o">.</span><span class="n">BD_OUT</span><span class="p">,[[</span><span class="mi">2</span><span class="p">],[</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">],[</span><span class="o">-</span><span class="mi">2</span><span class="p">]],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
-<span class="linenos">4</span>
-<span class="linenos">5</span><span class="n">T</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">UniTensor</span><span class="p">([</span><span class="n">bd1</span><span class="p">,</span><span class="n">bd2</span><span class="p">,</span><span class="n">bd3</span><span class="p">],</span> <span class="n">rowrank</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">])</span>
-<span class="linenos">6</span><span class="n">T</span><span class="o">.</span><span class="n">print_diagram</span><span class="p">()</span>
-<span class="linenos">7</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rowrank of T = &quot;</span><span class="p">,</span> <span class="n">T</span><span class="o">.</span><span class="n">rowrank</span><span class="p">())</span>
-<span class="linenos">8</span><span class="n">T</span><span class="o">.</span><span class="n">Transpose</span><span class="p">()</span><span class="o">.</span><span class="n">print_diagram</span><span class="p">()</span>  <span class="c1"># print the transposed T</span>
-<span class="linenos">9</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rowrank of transposed T = &quot;</span><span class="p">,</span> <span class="n">T</span><span class="o">.</span><span class="n">Transpose</span><span class="p">()</span><span class="o">.</span><span class="n">rowrank</span><span class="p">())</span>
-</pre></div>
-</div>
-<p>Output &gt;&gt;</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-----------------------
-tensor Name : 
-tensor Rank : 3
-contiguous  : True
-valid blocks : 6
-is diag   : False
-on device   : cytnx device: CPU
-      row           col 
-         -----------    
-         |         |    
-   a  --&gt;| 2     4 |--&gt;  c
-         |         |    
-   b  --&gt;| 2       |        
-         |         |    
-         -----------    
-
-Rowrank of T =  2
------------------------
-tensor Name : 
-tensor Rank : 3
-contiguous  : True
-valid blocks : 6
-is diag   : False
-on device   : cytnx device: CPU
-      row           col 
-         -----------    
-         |         |    
-   a *&lt;--| 2     4 |&lt;--* c
-         |         |    
-   b *&lt;--| 2       |        
-         |         |    
-         -----------    
-
-Rowrank of transposed T =  2
-</pre></div>
-</div>
-<p>We see that for the tagged UniTensor the rowrank (and the row/column space the legs belong to) is not changed, instead the .Transpose() <strong>inverted the direction of each bond</strong>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The operation <strong>.Dagger()</strong> (which is the transposition plus a conjugation) shows same behavior as transpose discussed above.</p>
-</div>
-</section>
 </section>
 
 

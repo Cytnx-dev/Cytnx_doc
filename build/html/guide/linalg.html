@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,15 +12,16 @@
     
     <title>9. Linear algebra &#8212; Cytnx  documentation</title>
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b849a4e9" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=2a422f08" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" href="../_static/bootstrap-4.3.1-dist/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/sphinxbootstrap4.css" type="text/css" />
-    <script src="../_static/jquery.js?v=5d32c60e"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
-    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <script src="../_static/sphinxbootstrap4.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -262,7 +264,13 @@
 <li class="toctree-l3"><a class="reference internal" href="contraction/ncon.html">8.3. ncon</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">9. Linear algebra</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9. Linear algebra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tensor-decomposition">9.1. Tensor decomposition</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#singular-value-decomposition">9.1.1. Singular value decomposition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eigenvalue-decomposition">9.1.2. Eigenvalue decomposition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qr-decomposition">9.1.3. QR decomposition</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="itersol.html">10. Iterative solver</a><ul>
@@ -278,17 +286,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="xlinalg.html">11. linalg extension</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="xlinalg.html#tensor-decomposition">11.1. Tensor decomposition</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="xlinalg.html#singular-value-decomposition">11.1.1. Singular value decomposition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="xlinalg.html#eigenvalue-decomposition">11.1.2. Eigenvalue decomposition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="xlinalg.html#qr-decomposition">11.1.3. QR decomposition</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="common.html">12. Common APIs</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="common.html#data-type">12.1. Data type</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common.html">11. Common APIs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="common.html#data-type">11.1. Data type</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="common.html#dtype"><code class="docutils literal notranslate"><span class="pre">.dtype()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="common.html#dtype_str"><code class="docutils literal notranslate"><span class="pre">.dtype_str()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="common.html#astype"><code class="docutils literal notranslate"><span class="pre">.astype()</span></code></a></li>
@@ -296,21 +295,21 @@
 <li class="toctree-l4"><a class="reference internal" href="common.html#imag"><code class="docutils literal notranslate"><span class="pre">.imag()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="common.html#device">12.2. Device</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="common.html#device">11.2. Device</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="common.html#id0"><code class="docutils literal notranslate"><span class="pre">.device()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="common.html#device_str"><code class="docutils literal notranslate"><span class="pre">.device_str()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="common.html#to"><code class="docutils literal notranslate"><span class="pre">.to()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="common.html#to_"><code class="docutils literal notranslate"><span class="pre">.to_()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="common.html#save-load">12.3. Save &amp; Load</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="common.html#save-load">11.3. Save &amp; Load</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="common.html#Save"><code class="docutils literal notranslate"><span class="pre">.Save()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="common.html#Load"><code class="docutils literal notranslate"><span class="pre">.Load()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="common.html#Tofile"><code class="docutils literal notranslate"><span class="pre">.Tofile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="common.html#Fromfile"><code class="docutils literal notranslate"><span class="pre">.Fromfile()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="common.html#operations">12.4. Operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="common.html#operations">11.4. Operations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="common.html#clone"><code class="docutils literal notranslate"><span class="pre">.clone()</span></code></a></li>
 </ul>
 </li>
@@ -668,7 +667,13 @@
 <li class="toctree-l3"><a class="reference internal" href="contraction/ncon.html">8.3. ncon</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">9. Linear algebra</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9. Linear algebra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tensor-decomposition">9.1. Tensor decomposition</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#singular-value-decomposition">9.1.1. Singular value decomposition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eigenvalue-decomposition">9.1.2. Eigenvalue decomposition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qr-decomposition">9.1.3. QR decomposition</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="itersol.html">10. Iterative solver</a><ul>
@@ -684,17 +689,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="xlinalg.html">11. linalg extension</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="xlinalg.html#tensor-decomposition">11.1. Tensor decomposition</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="xlinalg.html#singular-value-decomposition">11.1.1. Singular value decomposition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="xlinalg.html#eigenvalue-decomposition">11.1.2. Eigenvalue decomposition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="xlinalg.html#qr-decomposition">11.1.3. QR decomposition</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="common.html">12. Common APIs</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="common.html#data-type">12.1. Data type</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common.html">11. Common APIs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="common.html#data-type">11.1. Data type</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="common.html#dtype"><code class="docutils literal notranslate"><span class="pre">.dtype()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="common.html#dtype_str"><code class="docutils literal notranslate"><span class="pre">.dtype_str()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="common.html#astype"><code class="docutils literal notranslate"><span class="pre">.astype()</span></code></a></li>
@@ -702,21 +698,21 @@
 <li class="toctree-l4"><a class="reference internal" href="common.html#imag"><code class="docutils literal notranslate"><span class="pre">.imag()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="common.html#device">12.2. Device</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="common.html#device">11.2. Device</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="common.html#id0"><code class="docutils literal notranslate"><span class="pre">.device()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="common.html#device_str"><code class="docutils literal notranslate"><span class="pre">.device_str()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="common.html#to"><code class="docutils literal notranslate"><span class="pre">.to()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="common.html#to_"><code class="docutils literal notranslate"><span class="pre">.to_()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="common.html#save-load">12.3. Save &amp; Load</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="common.html#save-load">11.3. Save &amp; Load</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="common.html#Save"><code class="docutils literal notranslate"><span class="pre">.Save()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="common.html#Load"><code class="docutils literal notranslate"><span class="pre">.Load()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="common.html#Tofile"><code class="docutils literal notranslate"><span class="pre">.Tofile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="common.html#Fromfile"><code class="docutils literal notranslate"><span class="pre">.Fromfile()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="common.html#operations">12.4. Operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="common.html#operations">11.4. Operations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="common.html#clone"><code class="docutils literal notranslate"><span class="pre">.clone()</span></code></a></li>
 </ul>
 </li>
@@ -1134,6 +1130,261 @@
 <p>Many linear algebra functions can be used with Tensors and UniTensors. Most of the linear algebra algorithms take a matrix as an input. We use <a class="reference internal" href="uniten/manipulation.html#rowrank"><span class="std std-ref">Rowrank</span></a> to specify how to cast the input UniTensor into a matrix. See <a class="reference internal" href="uniten/manipulation.html#rowrank"><span class="std std-ref">Rowrank</span></a> as well for an example of how to calculate a singular value decomposition of a UniTensor.</p>
 <div class="toctree-wrapper compound">
 </div>
+<section id="tensor-decomposition">
+<h2><span class="section-number">9.1. </span>Tensor decomposition<a class="headerlink" href="#tensor-decomposition" title="Permalink to this heading">¶</a></h2>
+<p>As mention in the <strong>Manipulate UniTensor</strong>, the specification of <strong>rowrank</strong> makes it convinient to apply linear algebra operations on UniTensors.</p>
+<section id="singular-value-decomposition">
+<h3><span class="section-number">9.1.1. </span>Singular value decomposition<a class="headerlink" href="#singular-value-decomposition" title="Permalink to this heading">¶</a></h3>
+<p>Here is an example where a <strong>singular value decomposition (SVD)</strong> is performed on a UniTensor:</p>
+<ul class="simple">
+<li><p>In Python:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">T</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">UniTensor</span><span class="p">(</span><span class="n">cytnx</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">]),</span> <span class="n">rowrank</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="linenos"> 2</span><span class="n">S</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">Vt</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">Svd</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+<span class="linenos"> 3</span><span class="n">U</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;U&#39;</span><span class="p">)</span>
+<span class="linenos"> 4</span><span class="n">S</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">)</span>
+<span class="linenos"> 5</span><span class="n">Vt</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;Vt&#39;</span><span class="p">)</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="n">T</span><span class="o">.</span><span class="n">print_diagram</span><span class="p">()</span>
+<span class="linenos"> 9</span><span class="n">S</span><span class="o">.</span><span class="n">print_diagram</span><span class="p">()</span>
+<span class="linenos">10</span><span class="n">U</span><span class="o">.</span><span class="n">print_diagram</span><span class="p">()</span>
+<span class="linenos">11</span><span class="n">Vt</span><span class="o">.</span><span class="n">print_diagram</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Output &gt;&gt;</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-----------------------
+tensor Name : 
+tensor Rank : 5
+block_form  : False
+is_diag     : False
+on device   : cytnx device: CPU
+          ---------     
+         /         \    
+   0 ____| 5     5 |____ 3
+         |         |    
+   1 ____| 5     5 |____ 4
+         |         |    
+   2 ____| 5       |        
+         \         /    
+          ---------     
+-----------------------
+tensor Name : S
+tensor Rank : 2
+block_form  : False
+is_diag     : True
+on device   : cytnx device: CPU
+               -----------     
+              /           \    
+   _aux_L ____| 25     25 |____ _aux_R
+              \           /    
+               -----------     
+-----------------------
+tensor Name : U
+tensor Rank : 4
+block_form  : False
+is_diag     : False
+on device   : cytnx device: CPU
+          ----------     
+         /          \    
+   0 ____| 5     25 |____ _aux_L
+         |          |    
+   1 ____| 5        |        
+         |          |    
+   2 ____| 5        |        
+         \          /    
+          ----------     
+-----------------------
+tensor Name : Vt
+tensor Rank : 3
+block_form  : False
+is_diag     : False
+on device   : cytnx device: CPU
+               ----------     
+              /          \    
+   _aux_R ____| 25     5 |____ 3
+              |          |    
+              |        5 |____ 4
+              \          /    
+               ----------     
+</pre></div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<p>When calling <em>Svd</em>, the first three legs of <strong>T</strong> are automatically reshaped into one leg according to <strong>rowrank=3</strong>. After the SVD, the matrices <strong>U</strong> and <strong>Vt</strong> are automatically reshaped back into the corresponding index form of the original tensor. This way, we get the original UniTensor <strong>T</strong> if we contract <span class="math notranslate nohighlight">\(U \cdot S \cdot Vt\)</span>:</p>
+<ul class="simple">
+<li><p>In Python:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">Tsymm_diff</span><span class="o">=</span><span class="n">T</span><span class="o">-</span><span class="n">cytnx</span><span class="o">.</span><span class="n">Contracts</span><span class="p">([</span><span class="n">U</span><span class="p">,</span><span class="n">S</span><span class="p">,</span><span class="n">Vt</span><span class="p">])</span>
+<span class="linenos">2</span><span class="nb">print</span><span class="p">(</span><span class="n">Tsymm_diff</span><span class="o">.</span><span class="n">Norm</span><span class="p">()</span><span class="o">/</span><span class="n">T</span><span class="o">.</span><span class="n">Norm</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Output &gt;&gt;</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Total elem: 1
+type  : Double (Float64)
+cytnx device: CPU
+Shape : (1)
+[7.87947e-16 ]
+</pre></div>
+</div>
+<p>If we contract <span class="math notranslate nohighlight">\(U \cdot S \cdot Vt\)</span>, we get a tensor of the same shape as <strong>T</strong> and we can subtract the two tensors. The error <span class="math notranslate nohighlight">\(\frac{|T-U \cdot S \cdot Vt|}{|T|}\)</span> is of the order of machine precision, as expected.</p>
+<p>Here we demonstrate the usage of a more important function <strong>Svd_truncate()</strong> which appears frequently in the tensor network algorithm for truncatiing the bond dimension. In this example we print the singular values from doing <strong>Svd()</strong> and compare it to the result of <strong>Svd_truncate()</strong>:</p>
+<ul class="simple">
+<li><p>In Python:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">T</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">UniTensor</span><span class="p">(</span><span class="n">cytnx</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">]),</span> <span class="n">rowrank</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="linenos">2</span><span class="n">S1</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">Svd</span><span class="p">(</span><span class="n">Tin</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>
+<span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="n">S1</span><span class="p">)</span>
+<span class="linenos">4</span><span class="n">S2</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">Svd_truncate</span><span class="p">(</span><span class="n">Tin</span> <span class="o">=</span> <span class="n">T</span><span class="p">,</span> <span class="n">keepdim</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="mf">1e-12</span><span class="p">,</span> <span class="n">is_UvT</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">return_err</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="linenos">5</span><span class="nb">print</span><span class="p">(</span><span class="n">S2</span><span class="p">)</span>
+<span class="linenos">6</span><span class="nb">print</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output &gt;&gt;</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-------- start of print ---------
+Tensor name: 
+is_diag    : True
+contiguous : True
+
+Total elem: 25
+type  : Double (Float64)
+cytnx device: CPU
+Shape : (25)
+[5.59017e+01 4.65490e-15 9.57650e-46 3.07595e-77 8.59824e-108 6.24040e-138 1.64397e-168 2.17184e-199 6.65227e-230 2.54214e-261 8.00572e-292 1.46017e-308 5.43472e-323 5.43472e-323 5.43472e-323 4.94066e-323 4.94066e-323 4.94066e-323 4.94066e-323 4.94066e-323 4.94066e-323 4.94066e-323 4.94066e-323 4.94066e-323 4.94066e-323 ]
+
+
+
+
+-------- start of print ---------
+Tensor name: 
+is_diag    : True
+contiguous : True
+
+Total elem: 1
+type  : Double (Float64)
+cytnx device: CPU
+Shape : (1)
+[5.59017e+01 ]
+
+
+
+
+-------- start of print ---------
+Tensor name: 
+is_diag    : False
+contiguous : True
+
+Total elem: 1
+type  : Double (Float64)
+cytnx device: CPU
+Shape : (1)
+[4.65490e-15 ]
+</pre></div>
+</div>
+<p>We note that the singular values obtained by doing <strong>Svd_truncate()</strong> is truncated according to our <strong>err</strong> requirment, a <strong>keepdim</strong> argument is also passed to specify a maximum desired dimension. Finally we note that by setting <strong>return_err = 1</strong> we can get the largest truncated singular values, it is also possible to obtain all truncated value by passing any int &gt;1.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <strong>Svd()</strong> and <strong>Svd_truncate()</strong> calls xgesdd routines from LAPACKE internally, for other algorithms like xgesvd routines one may consider  <strong>Gesvd()</strong> and <strong>Gesvd_truncate()</strong> functions.</p>
+</div>
+</section>
+<section id="eigenvalue-decomposition">
+<h3><span class="section-number">9.1.2. </span>Eigenvalue decomposition<a class="headerlink" href="#eigenvalue-decomposition" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>In Python:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Create a rank-2 Tensor which represents a square matrix</span>
+<span class="linenos"> 2</span><span class="n">T</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="linenos"> 3</span><span class="c1"># Eigenvalue decomposition</span>
+<span class="linenos"> 4</span><span class="n">eigvals</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">Eig</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+<span class="linenos"> 5</span><span class="c1"># Create UniTensors corresponding to V, D, Inv(V), T</span>
+<span class="linenos"> 6</span><span class="n">uV</span><span class="o">=</span><span class="n">cytnx</span><span class="o">.</span><span class="n">UniTensor</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;uV&quot;</span><span class="p">)</span>
+<span class="linenos"> 7</span><span class="n">uD</span><span class="o">=</span><span class="n">cytnx</span><span class="o">.</span><span class="n">UniTensor</span><span class="p">(</span><span class="n">eigvals</span><span class="p">,</span> <span class="n">is_diag</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;uD&quot;</span><span class="p">)</span>
+<span class="linenos"> 8</span><span class="n">uV_inv</span><span class="o">=</span><span class="n">cytnx</span><span class="o">.</span><span class="n">UniTensor</span><span class="p">(</span><span class="n">cytnx</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">InvM</span><span class="p">(</span><span class="n">V</span><span class="p">),</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="s2">&quot;d&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Inv(uV)&quot;</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="n">uT</span><span class="o">=</span><span class="n">cytnx</span><span class="o">.</span><span class="n">UniTensor</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;d&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;uT&quot;</span><span class="p">)</span>
+<span class="linenos">10</span><span class="c1"># Compare uT with Uv * uD * uV_inv</span>
+<span class="linenos">11</span><span class="n">diff</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">Contracts</span><span class="p">([</span><span class="n">uV</span><span class="p">,</span><span class="n">uD</span><span class="p">,</span><span class="n">uV_inv</span><span class="p">])</span> <span class="o">-</span> <span class="n">uT</span>
+<span class="linenos">12</span><span class="nb">print</span><span class="p">(</span><span class="n">diff</span><span class="o">.</span><span class="n">Norm</span><span class="p">())</span> <span class="c1"># 1.71516e-14</span>
+</pre></div>
+</div>
+</section>
+<section id="qr-decomposition">
+<h3><span class="section-number">9.1.3. </span>QR decomposition<a class="headerlink" href="#qr-decomposition" title="Permalink to this heading">¶</a></h3>
+<p>The <strong>QR decomposition</strong> decomposes a matrix <em>M</em> to the form <em>M = QR</em>, where <em>Q</em> is an orthogonal matrix (<em>Q Q^T = I</em>), and <em>R</em> is a upper-right triangular matrix. One can perform a QR decomposition by using <strong>Qr()</strong>.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="Qr">
+<span class="sig-name descname"><span class="pre">Qr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Tin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Qr" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Tin</strong> (<em>cytnx.UniTensor</em>) – input tensor</p></li>
+<li><p><strong>is_tau</strong> (<em>bool</em>) – If <em>is_tau=True</em>, the function returns an additional one-dimensional tensor <em>tau</em> that contains the scaling factors of the Householder reflectors that generate <em>Q</em> along with <em>R</em>. See <span id="id1">[<a class="reference internal" href="#id3" title="E. Anderson, Z. Bai, C. Bischof, S. Blackford, J. Demmel, J. Dongarra, J. Du Croz, A. Greenbaum, S. Hammarling, A. McKenney, and D. Sorensen. LAPACK Users' Guide. Society for Industrial and Applied Mathematics, Philadelphia, PA, third edition, 1999. ISBN 0-89871-447-8 (paperback). https://www.netlib.org/lapack/lug/node69.html.">ABB+99</a>]</span> for details. Default: <em>is_tau=False</em></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Here is an example of a QR decomposition:</p>
+<ul class="simple">
+<li><p>In Python:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">uT</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">UniTensor</span><span class="p">(</span><span class="n">cytnx</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">]),</span> <span class="n">rowrank</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;uT&quot;</span><span class="p">)</span>
+<span class="linenos"> 2</span><span class="n">Q</span><span class="p">,</span> <span class="n">R</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">Qr</span><span class="p">(</span><span class="n">uT</span><span class="p">)</span>
+<span class="linenos"> 3</span><span class="n">Q</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s2">&quot;Q&quot;</span><span class="p">)</span>
+<span class="linenos"> 4</span><span class="n">R</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s2">&quot;R&quot;</span><span class="p">)</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="n">Q</span><span class="o">.</span><span class="n">print_diagram</span><span class="p">()</span>
+<span class="linenos"> 7</span><span class="n">R</span><span class="o">.</span><span class="n">print_diagram</span><span class="p">()</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c1"># Verify the recomposition</span>
+<span class="linenos">10</span><span class="nb">print</span><span class="p">((</span><span class="n">cytnx</span><span class="o">.</span><span class="n">Contract</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span><span class="n">R</span><span class="p">)</span><span class="o">-</span><span class="n">uT</span><span class="p">)</span><span class="o">.</span><span class="n">Norm</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Output &gt;&gt;</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>-----------------------
+tensor Name : Q
+tensor Rank : 4
+block_form  : False
+is_diag     : False
+on device   : cytnx device: CPU
+          ----------     
+         /          \    
+   0 ____| 5     25 |____ _aux_
+         |          |    
+   1 ____| 5        |        
+         |          |    
+   2 ____| 5        |        
+         \          /    
+          ----------     
+-----------------------
+tensor Name : R
+tensor Rank : 3
+block_form  : False
+is_diag     : False
+on device   : cytnx device: CPU
+              ----------     
+             /          \    
+   _aux_ ____| 25     5 |____ 3
+             |          |    
+             |        5 |____ 4
+             \          /    
+              ----------     
+
+Total elem: 1
+type  : Double (Float64)
+cytnx device: CPU
+Shape : (1)
+[3.64214e-14 ]
+</pre></div>
+</div>
+<div class="docutils container" id="id2">
+<div class="citation" id="id3" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">ABB+99</a><span class="fn-bracket">]</span></span>
+<p>E. Anderson, Z. Bai, C. Bischof, S. Blackford, J. Demmel, J. Dongarra, J. Du Croz, A. Greenbaum, S. Hammarling, A. McKenney, and D. Sorensen. <em>LAPACK Users' Guide</em>. Society for Industrial and Applied Mathematics, Philadelphia, PA, third edition, 1999. ISBN 0-89871-447-8 (paperback). <a class="reference external" href="https://www.netlib.org/lapack/lug/node69.html">https://www.netlib.org/lapack/lug/node69.html</a>.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 
 
@@ -1147,7 +1398,7 @@
 <footer class="footer d-flex justify-content-between flex-wrap">
     <div class="copyright">
         <div>&copy; Copyright 2019-, Kai-Hsin Wu.</div>
-      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 7.1.2 using <a href="https://github.com/myyasuda/sphinxbootstrap4theme">sphinxbootstrap4theme</a> 0.6.0.</div>
+      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 6.2.1 using <a href="https://github.com/myyasuda/sphinxbootstrap4theme">sphinxbootstrap4theme</a> 0.6.0.</div>
     </div>
     <div>
         <a href="#" class="btn btn-primary btn-sm" role="botton">Back to top</a>
