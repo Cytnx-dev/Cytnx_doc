@@ -30,6 +30,7 @@ project = 'Cytnx'
 copyright = '2019-, Kai-Hsin Wu'
 author = 'Kai-Hsin Wu'
 _version = 'v0.9.7'
+api_doc_version = 'v0.9.5'  #used in lnialg doc link
 #version = 'v0.5.5a'
 
 # -- General configuration ---------------------------------------------------

@@ -28,5 +28,5 @@ Further references
     https://github.com/kaihsin/Cytnx  
 
     A technical documentation of the namespaces and classes is available here:
-    https://kaihsin.github.io/Cytnx/docs/html/index.html  
+    https://kaihsinwu.gitlab.io/cytnx_api/
 
