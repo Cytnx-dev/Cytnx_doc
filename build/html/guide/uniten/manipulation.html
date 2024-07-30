@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,15 +11,15 @@
     
     <title>7.9. Manipulate UniTensor &#8212; Cytnx  documentation</title>
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b849a4e9" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=2a422f08" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=fb9458d3" />
     <link rel="stylesheet" href="../../_static/bootstrap-4.3.1-dist/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/sphinxbootstrap4.css" type="text/css" />
     <script src="../../_static/jquery.js?v=5d32c60e"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <script src="../../_static/sphinxbootstrap4.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -809,12 +809,12 @@
           <div class="body">
             
   <section id="manipulate-unitensor">
-<h1><span class="section-number">7.9. </span>Manipulate UniTensor<a class="headerlink" href="#manipulate-unitensor" title="Permalink to this heading">¶</a></h1>
+<h1><span class="section-number">7.9. </span>Manipulate UniTensor<a class="headerlink" href="#manipulate-unitensor" title="Link to this heading">¶</a></h1>
 <p>After having introduced the initialization and structure of the three UniTensor types (un-tagged, tagged and tagged with symmetries),
 we show the basic functionalities to manipulate UniTensors.</p>
 <p>Permutation, reshaping and arithmetic operations are accessed similarly to <strong>Tensor</strong> objects as introduced before, with slight modifications for symmetric UniTensors.</p>
 <section id="permute">
-<h2><span class="section-number">7.9.1. </span>Permute<a class="headerlink" href="#permute" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">7.9.1. </span>Permute<a class="headerlink" href="#permute" title="Link to this heading">¶</a></h2>
 <p>The bond order can be changed with <em>permute</em> for all kinds of UniTensors. The order can either be defined by the index order as for the permute method of a <em>Tensor</em>, or by specifying the label order after the permutation.</p>
 <p>For example, we permute the indices of the symmetric tensor that we introduced before:</p>
 <ul class="simple">
@@ -902,7 +902,7 @@ on device   : cytnx device: CPU
 <p>We did the same permutation in two ways in this example, once using indices, once using labels. The first index of the permuted tensor corresponds to the last index of the original tensor (original index 2, label “f”), the second new index to the first old index (old index 0, label “d”) and the last new bond has the old index 1 and label “e”.</p>
 </section>
 <section id="reshape">
-<h2><span class="section-number">7.9.2. </span>Reshape<a class="headerlink" href="#reshape" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">7.9.2. </span>Reshape<a class="headerlink" href="#reshape" title="Link to this heading">¶</a></h2>
 <p>Untagged UniTensors can be reshaped just like normal Tensors.</p>
 <ul class="simple">
 <li><p>In Python:</p></li>
@@ -936,14 +936,14 @@ on device   : cytnx device: CPU
 </div>
 </section>
 <section id="combine-bonds">
-<h2><span class="section-number">7.9.3. </span>Combine bonds<a class="headerlink" href="#combine-bonds" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">7.9.3. </span>Combine bonds<a class="headerlink" href="#combine-bonds" title="Link to this heading">¶</a></h2>
 <p>The tagged UniTensors include symmetric UniTensors cannot be reshaped, since the bonds to be combinded or splited now includes the direction and quantum number infomation,
 the reshape process involves the fusion or split of the qunatum basis, we provide combindBonds API for the tagged UniTensor as an alternative to the usual reshape function.
 Note that currently there is no API for splitting a bond, since the way to split the quantum basis will be ambiguous.
 Let’s see the complete function usage for combining bonds:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="UniTensor.combineBonds">
-<span class="sig-prename descclassname"><span class="pre">UniTensor.</span></span><span class="sig-name descname"><span class="pre">combineBonds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indicators</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#UniTensor.combineBonds" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">UniTensor.</span></span><span class="sig-name descname"><span class="pre">combineBonds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indicators</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#UniTensor.combineBonds" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -1151,11 +1151,11 @@ Shape : (1,1)
 </div>
 </section>
 <section id="arithmetic">
-<h2><span class="section-number">7.9.4. </span>Arithmetic<a class="headerlink" href="#arithmetic" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">7.9.4. </span>Arithmetic<a class="headerlink" href="#arithmetic" title="Link to this heading">¶</a></h2>
 <p>Arithmetic operations for un-tagged UniTensors can be done exactly the same as with Tensors, see <a class="reference internal" href="../basic_obj/Tensor_4_arithmetic.html#tensor-arithmetic"><span class="std std-ref">Tensor arithmetic</span></a>. The supported arithmetic operations and further linear algebra functions are listed in <a class="reference internal" href="../linalg.html#linear-algebra"><span class="std std-ref">Linear algebra</span></a>.</p>
 </section>
 <section id="rowrank">
-<h2><span class="section-number">7.9.5. </span>Rowrank<a class="headerlink" href="#rowrank" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">7.9.5. </span>Rowrank<a class="headerlink" href="#rowrank" title="Link to this heading">¶</a></h2>
 <p>Another property that we may want to maintain in UniTensor is its rowrank. It tells us how the legs of the a UniTensor are split into two halves, one part belongs to the rowspace and the other to the column space. A UniTensor can then be seen as a linear operator between these two spaces, or as a matrix. The matrix results in having the first <em>rowrank</em> indices combined to the first (row-)index and the other indices combined to the second (column-)index.</p>
 <p>Most of the linear algebra algorithms take a matrix as an input. We thus use rowrank to specify how to cast the input UniTensor into a matrix. In Cytnx, this specification makes it easy to use linear algebra operations on UniTensors.</p>
 <p>The rowrank can be specified when initializing the UniTenosr, one can also use <strong>.set_rowrank()</strong> to modify the rowrank of a UniTensor:</p>
@@ -1206,7 +1206,7 @@ on device   : cytnx device: CPU
 <p>We leave the examples of linalg algebra operations incoporating the rowrank concept such as <strong>singular value decomposition (SVD)</strong> to the chapter <a class="reference internal" href="../xlinalg.html#linalg-extension"><span class="std std-ref">linalg extension</span></a>.</p>
 </section>
 <section id="transpose">
-<h2><span class="section-number">7.9.6. </span>Transpose<a class="headerlink" href="#transpose" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">7.9.6. </span>Transpose<a class="headerlink" href="#transpose" title="Link to this heading">¶</a></h2>
 <p>One common operation that is sensitive to the <strong>rowrank</strong> of a UniTensor is the tranpose, one can transpose a UniTensor using <strong>.Transpose()</strong> (or the in-placed method <strong>.Transpose_()</strong>), let’s see the behavior of this operation, first consider the transpose of a <strong>non-tagged</strong> UniTensor:</p>
 <ul class="simple">
 <li><p>In Python:</p></li>
@@ -1321,7 +1321,7 @@ Rowrank of transposed T =  2
 <footer class="footer d-flex justify-content-between flex-wrap">
     <div class="copyright">
         <div>&copy; Copyright 2019-, Kai-Hsin Wu.</div>
-      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 7.1.2 using <a href="https://github.com/myyasuda/sphinxbootstrap4theme">sphinxbootstrap4theme</a> 0.6.0.</div>
+      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 8.0.2 using <a href="https://github.com/myyasuda/sphinxbootstrap4theme">sphinxbootstrap4theme</a> 0.6.0.</div>
     </div>
     <div>
         <a href="#" class="btn btn-primary btn-sm" role="botton">Back to top</a>

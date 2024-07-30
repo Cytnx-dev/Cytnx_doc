@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,15 +11,15 @@
     
     <title>7.1. Print and display &#8212; Cytnx  documentation</title>
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b849a4e9" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=2a422f08" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=fb9458d3" />
     <link rel="stylesheet" href="../../_static/bootstrap-4.3.1-dist/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/sphinxbootstrap4.css" type="text/css" />
     <script src="../../_static/jquery.js?v=5d32c60e"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <script src="../../_static/sphinxbootstrap4.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -809,7 +809,7 @@
           <div class="body">
             
   <section id="print-and-display">
-<h1><span class="section-number">7.1. </span>Print and display<a class="headerlink" href="#print-and-display" title="Permalink to this heading">¶</a></h1>
+<h1><span class="section-number">7.1. </span>Print and display<a class="headerlink" href="#print-and-display" title="Link to this heading">¶</a></h1>
 <p>Cytnx provides several ways to display the data stored in a UniTensor. This can be helpful to check the implementation.</p>
 <p>For demonstration purposes, we create three tensors in the following.</p>
 <ul class="simple">
@@ -847,9 +847,10 @@
 </div>
 <p>We will discuss how a UniTensor is created in <a class="reference internal" href="create.html#creating-a-unitensor"><span class="std std-ref">Creating a UniTensor</span></a> and the details about Symmetry, Bonds etc. in the following subchapters. Here, we want to focus on the output of <strong>print_diagram()</strong> and <strong>print</strong>, so no need to understand the lines above in detail.</p>
 <p>The tensor diagram of the three-leg UniTensor <em>uT</em> looks like:</p>
-<a class="reference internal image-reference" href="../../_images/untag.png"><img alt="../../_images/untag.png" class="align-center" src="../../_images/untag.png" style="width: 200px;" /></a>
+<a class="reference internal image-reference" href="../../_images/untag.png"><img alt="../../_images/untag.png" class="align-center" src="../../_images/untag.png" style="width: 200px;" />
+</a>
 <section id="print-diagram">
-<h2><span class="section-number">7.1.1. </span>print_diagram()<a class="headerlink" href="#print-diagram" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">7.1.1. </span>print_diagram()<a class="headerlink" href="#print-diagram" title="Link to this heading">¶</a></h2>
 <p>We can use <strong>print_diagram()</strong> to visualize the basic properties of a UniTensor</p>
 <ul class="simple">
 <li><p>In Python:</p></li>
@@ -1009,7 +1010,7 @@ on device   : cytnx device: CPU
 </ol>
 </section>
 <section id="print-and-print-blocks">
-<h2><span class="section-number">7.1.2. </span>print() and print_blocks()<a class="headerlink" href="#print-and-print-blocks" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">7.1.2. </span>print() and print_blocks()<a class="headerlink" href="#print-and-print-blocks" title="Link to this heading">¶</a></h2>
 <p>Further information and the actual data is printed with <strong>UniTensor.print_blocks()</strong>. Equivalently, one can use <strong>print(uT)</strong> where <em>uT</em> is a UniTensor.</p>
 <ul class="simple">
 <li><p>In Python:</p></li>
@@ -1141,7 +1142,7 @@ Shape : (1,1,1)
 <p>In the above output, the number in the square braket [] indicates the Qnum index. In the previous example, bond <strong>“f”</strong>, which is the outgoing bond of <em>Tsymm</em>, contains three quantum numbers. The element with quantum number <em>U1(2)</em> has the Qnum index [0] on this bond, the <em>U1(0)</em> elements have Qnum index [1], and <em>U1(2)</em> element has Qnum index [2]. The degeneracies are displayed inside the box next to the corresponding bond. For example, the quantum number <em>U1(0)</em> on bond <strong>“f”</strong> has the degeneracy 2, while all other quantum numbers have degeneracy 1.</p>
 </section>
 <section id="print-block">
-<h2><span class="section-number">7.1.3. </span>print_block()<a class="headerlink" href="#print-block" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">7.1.3. </span>print_block()<a class="headerlink" href="#print-block" title="Link to this heading">¶</a></h2>
 <p>To print a single block of a UniTensor in block form, one can use <strong>UniTensor.print_block(idx)</strong> where <em>idx</em> is the block index:</p>
 <ul class="simple">
 <li><p>In Python:</p></li>
@@ -1183,7 +1184,7 @@ Shape : (1,1,2)
 <footer class="footer d-flex justify-content-between flex-wrap">
     <div class="copyright">
         <div>&copy; Copyright 2019-, Kai-Hsin Wu.</div>
-      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 7.1.2 using <a href="https://github.com/myyasuda/sphinxbootstrap4theme">sphinxbootstrap4theme</a> 0.6.0.</div>
+      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 8.0.2 using <a href="https://github.com/myyasuda/sphinxbootstrap4theme">sphinxbootstrap4theme</a> 0.6.0.</div>
     </div>
     <div>
         <a href="#" class="btn btn-primary btn-sm" role="botton">Back to top</a>

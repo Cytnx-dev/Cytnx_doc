@@ -1,8 +1,8 @@
 Developer
 =================
 
-**Kai-Hsin Wu**
-PhD student @ Boston University
+**Kai-Hsin Wu, Ph.D.**
+@ QuEra Computing
 
 Contact:
 
