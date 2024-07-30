@@ -1,4 +1,4 @@
-A = cytnx.Tensor([2,3])
+A = cytnx.Tensor([2, 3])
 B = A
 
-print(B is A) # true
+print(B is A)  # true

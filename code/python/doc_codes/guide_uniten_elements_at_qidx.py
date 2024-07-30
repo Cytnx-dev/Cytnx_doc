@@ -1,1 +1,1 @@
-print(Tsymm.at([0,0,0]).value)
+print(Tsymm.at([0, 0, 0]).value)

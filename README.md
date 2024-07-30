@@ -6,7 +6,7 @@ The documentation of the Cytnx tensor network library
 Use Rye:
 
 ```
-   $rye sync 
+   $rye sync
    $rye run make_doc
 ```
 

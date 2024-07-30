@@ -1,4 +1,4 @@
-A = cytnx.ones([3,4])
+A = cytnx.ones([3, 4])
 B = A.numpy()
 print(A)
 print(type(B))

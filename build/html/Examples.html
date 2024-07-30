@@ -26,7 +26,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="1. Exact Diagonalization" href="example/ED.html" />
-    <link rel="prev" title="12. Common APIs" href="guide/common.html" /> 
+    <link rel="prev" title="11. Common APIs" href="guide/common.html" /> 
   </head><body>
   <nav class="navbar navbar-expand-md  fixed-top navbar-dark bg-dark flex-wrap">
     <button class="navbar-toggler ml-auto py-2" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
@@ -263,7 +263,13 @@
 <li class="toctree-l3"><a class="reference internal" href="guide/contraction/ncon.html">8.3. ncon</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="guide/linalg.html">9. Linear algebra</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="guide/linalg.html">9. Linear algebra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="guide/linalg.html#tensor-decomposition">9.1. Tensor decomposition</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="guide/linalg.html#singular-value-decomposition">9.1.1. Singular value decomposition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="guide/linalg.html#eigenvalue-decomposition">9.1.2. Eigenvalue decomposition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="guide/linalg.html#qr-decomposition">9.1.3. QR decomposition</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="guide/itersol.html">10. Iterative solver</a><ul>
@@ -279,17 +285,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="guide/xlinalg.html">11. linalg extension</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="guide/xlinalg.html#tensor-decomposition">11.1. Tensor decomposition</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="guide/xlinalg.html#singular-value-decomposition">11.1.1. Singular value decomposition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="guide/xlinalg.html#eigenvalue-decomposition">11.1.2. Eigenvalue decomposition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="guide/xlinalg.html#qr-decomposition">11.1.3. QR decomposition</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="guide/common.html">12. Common APIs</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="guide/common.html#data-type">12.1. Data type</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide/common.html">11. Common APIs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="guide/common.html#data-type">11.1. Data type</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#dtype"><code class="docutils literal notranslate"><span class="pre">.dtype()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#dtype_str"><code class="docutils literal notranslate"><span class="pre">.dtype_str()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#astype"><code class="docutils literal notranslate"><span class="pre">.astype()</span></code></a></li>
@@ -297,21 +294,21 @@
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#imag"><code class="docutils literal notranslate"><span class="pre">.imag()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="guide/common.html#device">12.2. Device</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="guide/common.html#device">11.2. Device</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#id0"><code class="docutils literal notranslate"><span class="pre">.device()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#device_str"><code class="docutils literal notranslate"><span class="pre">.device_str()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#to"><code class="docutils literal notranslate"><span class="pre">.to()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#to_"><code class="docutils literal notranslate"><span class="pre">.to_()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="guide/common.html#save-load">12.3. Save &amp; Load</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="guide/common.html#save-load">11.3. Save &amp; Load</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#Save"><code class="docutils literal notranslate"><span class="pre">.Save()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#Load"><code class="docutils literal notranslate"><span class="pre">.Load()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#Tofile"><code class="docutils literal notranslate"><span class="pre">.Tofile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#Fromfile"><code class="docutils literal notranslate"><span class="pre">.Fromfile()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="guide/common.html#operations">12.4. Operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="guide/common.html#operations">11.4. Operations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#clone"><code class="docutils literal notranslate"><span class="pre">.clone()</span></code></a></li>
 </ul>
 </li>
@@ -424,8 +421,8 @@
         </ol>
        <div>
           <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-               <a href="guide/common.html" title="Previous Chapter: 12. Common APIs" class="btn btn-primary" role="botton" accesskey="P">
-                   &laquo; 12. Common APIs
+               <a href="guide/common.html" title="Previous Chapter: 11. Common APIs" class="btn btn-primary" role="botton" accesskey="P">
+                   &laquo; 11. Common APIs
                </a>
                <a href="example/ED.html" title="Next Chapter: 1. Exact Diagonalization" class="btn btn-primary" role="botton" accesskey="N">
                    1. Exact Diag... &raquo;
@@ -664,7 +661,13 @@
 <li class="toctree-l3"><a class="reference internal" href="guide/contraction/ncon.html">8.3. ncon</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="guide/linalg.html">9. Linear algebra</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="guide/linalg.html">9. Linear algebra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="guide/linalg.html#tensor-decomposition">9.1. Tensor decomposition</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="guide/linalg.html#singular-value-decomposition">9.1.1. Singular value decomposition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="guide/linalg.html#eigenvalue-decomposition">9.1.2. Eigenvalue decomposition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="guide/linalg.html#qr-decomposition">9.1.3. QR decomposition</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="guide/itersol.html">10. Iterative solver</a><ul>
@@ -680,17 +683,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="guide/xlinalg.html">11. linalg extension</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="guide/xlinalg.html#tensor-decomposition">11.1. Tensor decomposition</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="guide/xlinalg.html#singular-value-decomposition">11.1.1. Singular value decomposition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="guide/xlinalg.html#eigenvalue-decomposition">11.1.2. Eigenvalue decomposition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="guide/xlinalg.html#qr-decomposition">11.1.3. QR decomposition</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="guide/common.html">12. Common APIs</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="guide/common.html#data-type">12.1. Data type</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide/common.html">11. Common APIs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="guide/common.html#data-type">11.1. Data type</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#dtype"><code class="docutils literal notranslate"><span class="pre">.dtype()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#dtype_str"><code class="docutils literal notranslate"><span class="pre">.dtype_str()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#astype"><code class="docutils literal notranslate"><span class="pre">.astype()</span></code></a></li>
@@ -698,21 +692,21 @@
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#imag"><code class="docutils literal notranslate"><span class="pre">.imag()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="guide/common.html#device">12.2. Device</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="guide/common.html#device">11.2. Device</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#id0"><code class="docutils literal notranslate"><span class="pre">.device()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#device_str"><code class="docutils literal notranslate"><span class="pre">.device_str()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#to"><code class="docutils literal notranslate"><span class="pre">.to()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#to_"><code class="docutils literal notranslate"><span class="pre">.to_()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="guide/common.html#save-load">12.3. Save &amp; Load</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="guide/common.html#save-load">11.3. Save &amp; Load</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#Save"><code class="docutils literal notranslate"><span class="pre">.Save()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#Load"><code class="docutils literal notranslate"><span class="pre">.Load()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#Tofile"><code class="docutils literal notranslate"><span class="pre">.Tofile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#Fromfile"><code class="docutils literal notranslate"><span class="pre">.Fromfile()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="guide/common.html#operations">12.4. Operations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="guide/common.html#operations">11.4. Operations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="guide/common.html#clone"><code class="docutils literal notranslate"><span class="pre">.clone()</span></code></a></li>
 </ul>
 </li>
@@ -774,7 +768,7 @@
   <div>
     <h4>Previous topic</h4>
     <p class="topless"><a href="guide/common.html"
-                          title="previous chapter"><span class="section-number">12. </span>Common APIs</a></p>
+                          title="previous chapter"><span class="section-number">11. </span>Common APIs</a></p>
   </div>
   <div>
     <h4>Next topic</h4>

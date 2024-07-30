@@ -9,7 +9,7 @@
 
 #define OUT_REDIRECT                                                                 \
   string suite_name = testing::UnitTest::GetInstance()->current_test_info()->name(); \
-  \ 
+  \
 	output_file_o.open(output_dir + suite_name + ".out");                        \
   OUT_REDIRECT_BASE
 

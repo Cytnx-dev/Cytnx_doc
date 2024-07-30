@@ -1,1 +1,1 @@
-net.setOrder(optimal = True)
+net.setOrder(optimal=True)

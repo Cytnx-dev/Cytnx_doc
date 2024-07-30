@@ -6,5 +6,4 @@ Developer
 
 Contact:
 
-* email: kaihsinwu@gmail.com 
-
+* email: kaihsinwu@gmail.com

@@ -5,6 +5,6 @@ print(A)
 
 A.Tofile("S1")
 
-#load
-B = cytnx.Storage.Fromfile("S1",cytnx.Type.Double)
+# load
+B = cytnx.Storage.Fromfile("S1", cytnx.Type.Double)
 print(B)
