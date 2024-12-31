@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 
-<html lang="en" data-content_root="../../">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,15 +12,15 @@
     
     <title>7.10. Save/Load a UniTensor &#8212; Cytnx  documentation</title>
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=fb9458d3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
     <link rel="stylesheet" href="../../_static/bootstrap-4.3.1-dist/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/sphinxbootstrap4.css" type="text/css" />
-    <script src="../../_static/jquery.js?v=5d32c60e"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <script src="../../_static/sphinxbootstrap4.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -372,7 +373,7 @@
               
                   <a  class="nav-link" href="https://github.com/Cytnx-dev/Cytnx">Github</a></li>
               <li class="nav-item">
-              <a  class="nav-link" href="../../index.html">v0.9.7</a></li>
+              <a  class="nav-link" href="../../index.html">v1.0.0</a></li>
           </ul>
           <div class="dropdown-divider d-block d-sm-none mb-4"></div>
              
@@ -398,7 +399,7 @@
                   
                       <a  class="nav-link" href="https://github.com/Cytnx-dev/Cytnx">Github</a></li>
                   <li>
-                  <a  class="nav-link" href="../../index.html">v0.9.7</a></li>
+                  <a  class="nav-link" href="../../index.html">v1.0.0</a></li>
               </ul>
               <div class="dropdown-divider"></div>
               <div class="navbar-text">search<div>
@@ -803,10 +804,10 @@
           <div class="body">
             
   <section id="save-load-a-unitensor">
-<h1><span class="section-number">7.10. </span>Save/Load a UniTensor<a class="headerlink" href="#save-load-a-unitensor" title="Link to this heading">¶</a></h1>
+<h1><span class="section-number">7.10. </span>Save/Load a UniTensor<a class="headerlink" href="#save-load-a-unitensor" title="Permalink to this heading">¶</a></h1>
 <p>Cyntx provides a way to save/read UniTensors to/from a file.</p>
 <section id="save-a-unitensor">
-<h2><span class="section-number">7.10.1. </span>Save a UniTensor<a class="headerlink" href="#save-a-unitensor" title="Link to this heading">¶</a></h2>
+<h2><span class="section-number">7.10.1. </span>Save a UniTensor<a class="headerlink" href="#save-a-unitensor" title="Permalink to this heading">¶</a></h2>
 <p>To save a Tensor to a file, simply call <strong>UniTensor.Save(filepath)</strong>.</p>
 <ul class="simple">
 <li><p>In Python:</p></li>
@@ -829,7 +830,7 @@
 <p>This will save UniTensors <em>T1</em> and <em>T2</em> to the current directory as <strong>Untagged_ut.cytnx</strong> and <strong>sym_ut.cytnx</strong>, with <em>.cytnx</em> as file extension.</p>
 </section>
 <section id="load-a-unitensor">
-<h2><span class="section-number">7.10.2. </span>Load a UniTensor<a class="headerlink" href="#load-a-unitensor" title="Link to this heading">¶</a></h2>
+<h2><span class="section-number">7.10.2. </span>Load a UniTensor<a class="headerlink" href="#load-a-unitensor" title="Permalink to this heading">¶</a></h2>
 <p>Now, let’s load the UniTensor from the file.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">T1_</span> <span class="o">=</span> <span class="n">cytnx</span><span class="o">.</span><span class="n">UniTensor</span><span class="o">.</span><span class="n">Load</span><span class="p">(</span><span class="s2">&quot;Untagged_ut.cytnx&quot;</span><span class="p">)</span>
 <span class="linenos">2</span><span class="nb">print</span><span class="p">(</span><span class="n">T1_</span><span class="o">.</span><span class="n">labels</span><span class="p">())</span>
@@ -867,7 +868,7 @@ is_diag    : False
 [OVERALL] contiguous : True
 ========================
 BLOCK [#0]
- |- []   : Qn index
+ |- []   : Qn index 
  |- Sym(): Qnum of correspond symmetry
                  -----------
                  |         |
@@ -883,7 +884,7 @@ Shape : (1,1)
 
 ========================
 BLOCK [#1]
- |- []   : Qn index
+ |- []   : Qn index 
  |- Sym(): Qnum of correspond symmetry
                  -----------
                  |         |
@@ -900,7 +901,7 @@ Shape : (2,2)
 
 ========================
 BLOCK [#2]
- |- []   : Qn index
+ |- []   : Qn index 
  |- Sym(): Qnum of correspond symmetry
                   -----------
                   |         |
@@ -932,7 +933,7 @@ Shape : (1,1)
 <footer class="footer d-flex justify-content-between flex-wrap">
     <div class="copyright">
         <div>&copy; Copyright 2019-, Kai-Hsin Wu.</div>
-      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 8.0.2 using <a href="https://github.com/myyasuda/sphinxbootstrap4theme">sphinxbootstrap4theme</a> 0.6.0.</div>
+      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 6.2.1 using <a href="https://github.com/myyasuda/sphinxbootstrap4theme">sphinxbootstrap4theme</a> 0.6.0.</div>
     </div>
     <div>
         <a href="#" class="btn btn-primary btn-sm" role="botton">Back to top</a>
