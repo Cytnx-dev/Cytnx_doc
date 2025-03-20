@@ -166,16 +166,7 @@ Compiling process
 -------------------
 Once you installed all the dependencies, it is time to start building the Cytnx source code. 
 
-**Option A. Compiling with script**
-
-Starting from v0.7.6a, Cytnx provides a shell script **Install.sh**, which contains all the cmake arguments as a check list. To install, edit the script, un-comment and modify custom parameters in the corresponding lines. Then, simply execute this script:
-
-.. code-block:: shell
-
-    $sh Install.sh
-
-
-**Option B. Using cmake install**
+**Using cmake install**
 
 Please see the following steps for the standard cmake compiling process and all the compiling options:
 
