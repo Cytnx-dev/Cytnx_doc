@@ -126,7 +126,7 @@ Let us consider the same example as before for Python. Here, we want to compile 
     using namespace std;
 
     int main(){
-        auto A = zeros(4);
+        auto A = cytnx::zeros(4);
         cout << A << endl;        
         return 0;
     }
